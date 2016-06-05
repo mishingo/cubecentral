@@ -41,13 +41,21 @@ function oscar_batlle_setup() {
 	 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 	 */
 	add_theme_support( 'post-thumbnails' );
-
+    
+    add_filter('nav_menu_css_class' , 'nav_menu_add_post_status_class' , 10 , 2);
+    function nav_menu_add_post_status_class($classes, $item){
+        $post_status = get_post_status($item->object_id);
+        $classes[] = $post_status;
+        return $classes;
+    }
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'oscar-batlle' ),
 		'l-sidebar' => esc_html__( 'l-sidebar'),
+        'home-menu' => esc_html__( 'home-menu'),
+        'parent-bar' => esc_html__( 'parent-bar'),
 		'footer-1' => esc_html__( 'footer-1'),
-		'footer-2' => esc_html__( 'footer-2')
+		'footer-b' => esc_html__( 'footer-b')
 	) );
 
 	/*

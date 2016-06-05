@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Articles-template
+    Template Name: Parent-Template
 */
 $thumbnail_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 get_header();
@@ -9,32 +9,31 @@ get_template_part('inc/navbar','page');
 
 <!-- MAIN CONTENT -->
 
-<div class="row">
-    <div class="container">
-        <div class="col-3of12 dn-m plm pbl">
-           <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
-                      
-                           <div class="row">
-                             <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
-                           </div>
-                           <div class="row mtm">
-                             <img src="http://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
-                           </div>
-                           <div class="row mtm">
-                             <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
-                           </div>
-                       </div>
+<div class="row plm prm pbm pao--m">
+    <div class="container plm prm pao--,">
+        <div class="col-3of12 dn-m">
+            <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
+                <div class="row">
+                  <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
+                </div>
+                <div class="row mtm">
+                  <img src="http://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
+                </div>
+                <div class="row mtm">
+                  <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
+                </div>
+            </div>
         </div>
-        <div class="col-9of12 background-white  pam pbxl">
-            <div class="row">
+        <div class="col-9of12 background-white  ptm pbxl">
+            <div class="row plm prm">
                 <?php custom_breadcrumbs(); ?>
             </div>
             <div class="row mts">
                 <?php if (has_post_thumbnail())
                 { ?>
                     
-                    <section class="row mts pam pll prl" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover; min-height: 220px; background-position:center center;">
-                        <h1 class="tw-ultrabold ta-center tc-white t-shadow-dark pas background-green col-7of12 pull"><?php the_title(); ?></h1>
+                    <section class="row mts pam pll prl" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover; height: 220px; background-position:center center;">
+                        <h1 class="tw-ultrabold ta-center tc-white t-shadow-dark pas background-green col-5of12 pull"><?php the_title(); ?></h1>
                     </section>
                     <!-- end of section with class feature-image feature-image-default -->
                 <?php } else
@@ -46,7 +45,7 @@ get_template_part('inc/navbar','page');
                     <!-- end of section with class feature-image feature-image-default -->
                 <?php } ?>
             </div>
-            <div class="container mts">
+            <div class="container mts pll prl ptm">
                 <div class="row" id="primary">
                     <div id="content" class="col-sm-12">
                         <section class="main-content">
@@ -66,7 +65,7 @@ get_template_part('inc/navbar','page');
                     <h3> Check out our articles with tips to better your resume:</h3>
                 </div>
                 <div class="row mtm respond-half">
-                    <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' ORDER BY rand() LIMIT 8" , 'OBJECT');    ?>
+                    <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' ORDER BY menu_order", 'OBJECT');    ?>
                         <?php $i=0; ?>
                         <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                             <?php
@@ -82,7 +81,7 @@ get_template_part('inc/navbar','page');
                             <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
                                 <div class="table-all">
                                     <div class="table-cell-f ta-center">
-                                        <div class="background-linkedin pas">
+                                        <div class="background-primary pas">
                                             <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
                                         </div>
                                     </div>
@@ -96,11 +95,12 @@ get_template_part('inc/navbar','page');
                             <?php } ?>
                     <?php endforeach; endif;?>
                 </div>
+            </div>
                 <!-- end of div with class row -->
             </div>
             <!-- end of container -->
         </div>
-        
     </div>
+
 </div>
 <?php get_footer(); ?>

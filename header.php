@@ -18,7 +18,7 @@
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <!--<link rel="stylesheet" href="https://onlineresumebuilders.com/styles/app-1f0e1b897f.css">-->
 
-<link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-466e262f28.css">
+<link rel="stylesheet" href="http://localhost:3000/app/index.css">
 <?php wp_head(); ?>
 </head>
 <style>

@@ -20,16 +20,16 @@ get_header();
 	  			</div>
 	  		</div>
 	    	<div class="row pas dont-respond">
-           		<div class="col-3of12">
+           		<div class="col-6of12">
              		<img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/logo-white.svg">
            		</div>
-           		<div class="col-3of12  ">
+           		<div class="col-4of12  ">
             		<div class="table">
 						<!--<div class="table-cell-f dn-m-tcell">
 							<a ui-sref="faq" class="tw-normal">FAQ</a>
 						</div>-->
 						<div class="table-cell-f dn-m-tcell">
-							<a ui-sref="contact" class="tw-normal tc-white" href="/how-to-write-your-first-resume">Resources</a>
+							<?php wp_nav_menu( array( 'theme_location' => 'home-menu', 'menu_id' => 'home-menu' ) ); ?>
 						</div>
 						<div class="table-cell-f">
 							<a href="https://app.onlineresumebuilders.com/login" class="tw-ultrabold tc-white"><li class="pas plm prm ta-center border-white btn-a-f br-30 hover-yellow"> Login</li></a>
@@ -43,7 +43,7 @@ get_header();
 		<div class="container">
 
 			<div class="row ta-center tc-white pls prs">
-				<h1 class="tw-light">Build your perfect <strong>resume!</strong></h1>
+				<h2 class="tw-light h1 t-shadow">Build your perfect <strong>resume!</strong></h2>
 				<h4 class="tw-bold tc-white"> It only takes 5 minutes.</h4>
 				<h4 class="tw-light mtm">We make it fast and easy to create the powerful, professional resume, hiring managers are looking for. </h4>
 
@@ -55,7 +55,7 @@ get_header();
 
 			</div>
 			<div class="col-10 mhc prm plm mtl">
-				<!-- ngIf: !mobilecheck() --><div class="row sec-hero  ng-scope" ng-if="!mobilecheck()">
+				<!-- ngIf: !mobilecheck() --><div class="row sec-hero  dn-m" >
 				</div><!-- end ngIf: !mobilecheck() -->
 			</div>
 		</div>
@@ -65,8 +65,9 @@ get_header();
 <section class="row sec-2 pbxl ng-scope">
 	
 	<div class="container ptxl plm prm pbl ">
-		<div class="row">
-			<h4 class="tw-normal tc-white ta-center"> We have a team of experts that have completed a research study to identify the key factors for an effective resume! </h4>
+		<div class="row ta-center tc-white">
+			<h1> Online Resume Builders </h1>
+			<h4 class="tw-normal mts"> We have a team of experts that have completed a research study to identify the key factors for an effective resume! </h4>
 		</div>
 		<div class="row pam ptl ta-center tc-white">
 			<h2> How It's Done </h2>
