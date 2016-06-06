@@ -19,7 +19,7 @@ $params = $_SERVER['QUERY_STRING'];
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-<link rel="stylesheet" href="https://onlineresumebuilders.com/styles/styles/app-40b8f22a0f.css">
+<link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/styles/app-40b8f22a0f.css">
 
 <!--<link rel="stylesheet" href="http://localhost:3000/app/index.css">-->
 <?php wp_head(); ?>
