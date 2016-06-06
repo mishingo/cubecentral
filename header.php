@@ -8,7 +8,7 @@
  *
  * @package Oscar Batlle
  */
-
+$params = $_SERVER['QUERY_STRING'];
 ?>
 <!DOCTYPE html>
 <html <?php language_attributes(); ?> >

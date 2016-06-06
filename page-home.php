@@ -4,13 +4,11 @@
 */
 
 get_header(); 
+
 ?>
 
-
-<?php /* Here you include the get_template_part('templates/content', 'NameOfYourTemplate'); */?>
 <div class="full-height ng-scope" ui-view=""><form ng-submit="signup()" name="signupForm" class="full-height ng-pristine ng-valid ng-scope">
-    <!-- our nested state views will be injected here -->
-    <!-- uiView: undefined --><div class="ui-view full-height ng-scope"><section class="row sec-1 ptm ng-scope">
+    <div class="ui-view full-height ng-scope"><section class="row sec-1 ptm ng-scope">
 	<nav class="row pbm plm prm">
 	  	<div class="container">
 	  		<div class="row bottom dn-m">
@@ -25,14 +23,15 @@ get_header();
            		</div>
            		<div class="col-4of12  ">
             		<div class="table">
-						<!--<div class="table-cell-f dn-m-tcell">
-							<a ui-sref="faq" class="tw-normal">FAQ</a>
-						</div>-->
 						<div class="table-cell-f dn-m-tcell">
 							<?php wp_nav_menu( array( 'theme_location' => 'home-menu', 'menu_id' => 'home-menu' ) ); ?>
 						</div>
 						<div class="table-cell-f">
-							<a href="https://app.onlineresumebuilders.com/login" class="tw-ultrabold tc-white"><li class="pas plm prm ta-center border-white btn-a-f br-30 hover-yellow"> Login</li></a>
+            <?php if ($params) : ?>
+            <a href="https://app.onlineresumebuilders.com/login?<?php echo $params ?>" class="tw-ultrabold tc-white"><li class="pas plm prm ta-center border-white btn-a-f br-30 hover-yellow"> Login</li></a>
+            <?php else : ?>
+            <a href="https://app.onlineresumebuilders.com/login" class="tw-ultrabold tc-white"><li class="pas plm prm ta-center border-white btn-a-f br-30 hover-yellow"> Login</li></a>
+            <?php endif; ?>
 						</div>
             		</div>
            		</div>   
@@ -48,15 +47,18 @@ get_header();
 				<h4 class="tw-light mtm">We make it fast and easy to create the powerful, professional resume, hiring managers are looking for. </h4>
 
 			
-				<!-- ngIf: mobilecheck() -->
-				<!-- ngIf: !mobilecheck() --><div class="row mtl ng-scope" >
-					<a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com/basicinfo"> Create Resume Now </a>
-				</div><!-- end ngIf: !mobilecheck() -->
+				<div class="row mtl ng-scope" >
+            <?php if ($params) : ?>
+            <a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com/basicinfo?<?php echo $params; ?>"> Create Resume Now </a>
+            <?php else : ?>
+            <a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com/basicinfo"> Create Resume Now </a>
+            <?php endif; ?>
+				</div>
 
 			</div>
 			<div class="col-10 mhc prm plm mtl">
-				<!-- ngIf: !mobilecheck() --><div class="row sec-hero  dn-m" >
-				</div><!-- end ngIf: !mobilecheck() -->
+            <div class="row sec-hero  dn-m" >
+				</div>
 			</div>
 		</div>
 	</div>
@@ -107,7 +109,11 @@ get_header();
 			<h2 class="tw-light"> We Do All The Work </h2>
 			<p class="">We really do make it easy. Simply answer our question and we’ll populate your resume
  with the right look, and in the right place. </p>
-			<a  class="round-btn tw-ultrabold  pas plm prm background-tertiary br-30 " href="https://app.onlineresumebuilders.com">Get Started</a>
+      <?php if ($params) : ?>
+      <a class="round-btn tw-ultrabold  pas plm prm background-tertiary br-30 " href="https://app.onlineresumebuilders.com/basicinfo?<?php echo $params; ?>">Get Started</a>
+      <?php else: ?>
+			  <a class="round-btn tw-ultrabold  pas plm prm background-tertiary br-30 " href="https://app.onlineresumebuilders.com/basicinfo">Get Started</a>
+      <?php endif; ?>
 		</div>
 	</div>
 </section> 
