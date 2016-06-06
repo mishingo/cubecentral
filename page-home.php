@@ -5,6 +5,7 @@
 
 get_header(); 
 
+$params = $_SERVER['QUERY_STRING'];
 ?>
 
 <div class="full-height ng-scope" ui-view=""><form ng-submit="signup()" name="signupForm" class="full-height ng-pristine ng-valid ng-scope">
