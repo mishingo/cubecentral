@@ -50,7 +50,7 @@ get_header();
 			
 				<!-- ngIf: mobilecheck() -->
 				<!-- ngIf: !mobilecheck() --><div class="row mtl ng-scope" >
-					<a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com"> Create Resume Now </a>
+					<a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com/basicinfo"> Create Resume Now </a>
 				</div><!-- end ngIf: !mobilecheck() -->
 
 			</div>
