@@ -24,7 +24,7 @@
         <?php wp_nav_menu( array( 'theme_location' => 'parent-bar', 'menu_id' => 'parent-bar' ) ); ?> 
         </div> 
     </div>
-    <div class="row background-secondary" id="mobile-menu-display"> 
+    <div class="row background-secondary" id="mobile-menu-display" > 
         <div class="container plm prm">  
         <?php wp_nav_menu( array( 'theme_location' => 'home-menu', 'menu_id' => 'mobile-menu-bar' ) ); ?> 
         </div> 
