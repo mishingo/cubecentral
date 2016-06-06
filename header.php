@@ -12,13 +12,13 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta charset="<?php bloginfo( 'charset' ); ?>">=
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 <!--<link rel="stylesheet" href="https://onlineresumebuilders.com/styles/app-1f0e1b897f.css">-->
 
-<link rel="stylesheet" href="http://localhost:3000/app/index.css">
+<link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-d4bc8c6a35.css">
 <?php wp_head(); ?>
 </head>
 <style>
