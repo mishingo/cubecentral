@@ -22,7 +22,7 @@
 <link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-40b8f22a0f.css">
 
 
-<link rel="stylesheet" href="http://localhost:3000/app/index.css">
+<!--<link rel="stylesheet" href="http://localhost:3000/app/index.css">-->
 <?php wp_head(); ?>
 </head>
 <style>
