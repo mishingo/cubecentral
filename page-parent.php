@@ -10,7 +10,7 @@ get_template_part('inc/navbar','page');
 <!-- MAIN CONTENT -->
 
 <div class="row plm prm pbm pao--m">
-    <div class="container plm prm pao--,">
+    <div class="container plm prm ">
         <div class="col-3of12 dn-m">
             <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
                 <div class="row">
@@ -32,20 +32,21 @@ get_template_part('inc/navbar','page');
                 <?php if (has_post_thumbnail())
                 { ?>
                     
-                    <section class="row mts pam pll prl" style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover; height: 220px; background-position:center center;">
-                        <h1 class="tw-ultrabold ta-center tc-white t-shadow-dark pas background-green col-5of12 pull"><?php the_title(); ?></h1>
+                    <section class="row mts " style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover; min-height: 220px; background-position:center center;">
+
+                        <h1 class="h1 tw-ultrabold tc-white t-shadow-dark pas plm prm background-secondary col-7 bbrr-m sal ta-center--m"><?php the_title(); ?></h1>
                     </section>
                     <!-- end of section with class feature-image feature-image-default -->
                 <?php } else
                 { ?>
 
-                    <section class="row plm prm" data-type="background" >
+                    <section class="row plm" data-type="background" >
                         <h1><?php the_title(); ?></h1>
                     </section>
                     <!-- end of section with class feature-image feature-image-default -->
                 <?php } ?>
             </div>
-            <div class="container mts pll prl ptm">
+            <div class="container mts plm prm ptm">
                 <div class="row" id="primary">
                     <div id="content" class="col-sm-12">
                         <section class="main-content">
