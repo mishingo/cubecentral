@@ -66,9 +66,11 @@
 $( document ).ready(function() {
     //$( "#mobile-menu-bar" ).hide();
     $("#mobile-menu-action").click(function(){
-    	
     	$( "#mobile-menu-bar" ).slideToggle();
-    	
+    });
+
+    $("#plain-text-display").click(function(){
+    	$( "#plain-text-sample" ).slideToggle();
     });
 });
 </script>
