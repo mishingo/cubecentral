@@ -13,17 +13,16 @@ get_template_part('inc/navbar','page');
     <div class="container">
         <div class="col-3of12 dn-m plm pbl">
            <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
-                      
-                           <div class="row">
-                             <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
-                           </div>
-                           <div class="row mtm">
-                             <img src="http://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
-                           </div>
-                           <div class="row mtm">
-                             <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
-                           </div>
-                       </div>
+               <div class="row">
+                 <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
+               </div>
+               <div class="row mtm">
+                 <img src="http://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
+               </div>
+               <div class="row mtm">
+                 <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
+               </div>
+           </div>
         </div>
         <div class="col-9of12 background-white  pam pbxl">
             <div class="row">
@@ -95,6 +94,9 @@ get_template_part('inc/navbar','page');
                                 </div>
                             <?php } ?>
                     <?php endforeach; endif;?>
+                </div>
+                <div class="row">
+                    
                 </div>
                 <!-- end of div with class row -->
             </div>
