@@ -34,7 +34,7 @@ get_template_part('inc/navbar','page');
                     
                     <section class="row mts " style="background: url('<?php echo $thumbnail_url; ?>') no-repeat; background-size: cover; min-height: 220px; background-position:center center;">
 
-                        <h1 class="h1 tw-ultrabold ta-center tc-white t-shadow-dark pas background-green col-7 bbrr-m sal ta-center--m"><?php the_title(); ?></h1>
+                        <h1 class="h1 tw-ultrabold ta-center tc-white t-shadow-dark pas plm prm background-green col-7 bbrr-m sal ta-center--m"><?php the_title(); ?></h1>
                     </section>
                     <!-- end of section with class feature-image feature-image-default -->
                 <?php } else
