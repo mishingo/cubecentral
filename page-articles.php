@@ -96,9 +96,7 @@ get_template_part('inc/navbar','page');
                     <?php endforeach; endif;?>
                 </div>
                 <div class="row">
-                    <?php $postid = get_the_ID(); 
-                    [acf field="resume_plain_text" post_id="$post_id"]
-                    ?>
+                    
                 </div>
                 <!-- end of div with class row -->
             </div>
