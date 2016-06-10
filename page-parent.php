@@ -17,7 +17,7 @@ get_template_part('inc/navbar','page');
                   <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
                 </div>
                 <div class="row mtm">
-                  <img src="http://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
+                  <img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
                 </div>
                 <div class="row mtm">
                   <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
