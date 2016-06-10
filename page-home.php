@@ -43,7 +43,7 @@ $params = $_SERVER['QUERY_STRING'];
 		<div class="container">
 
 			<div class="row ta-center tc-white pls prs">
-				<h2 class="tw-light h1 t-shadow">Build your perfect <strong>resume!</strong></h2>
+				<h2 class="tw-bold h1 t-shadow">Build your perfect <strong>resume!</strong></h2>
 				<h4 class="tw-bold tc-white"> It only takes 5 minutes.</h4>
 				<h4 class="tw-light mtm">We make it fast and easy to create the powerful, professional resume, hiring managers are looking for. </h4>
 
