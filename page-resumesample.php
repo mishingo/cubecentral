@@ -15,7 +15,7 @@ get_template_part('inc/navbar','page');
       <div class="table">
          <div class="row mts table-cell-f article-hero" style="background-image: url(<?php echo $thumbnail_url; ?>);">
             <div class="ta-center tw-ultrabold tc-white pas plm prm br-m background-green col-7 mhc bbrr-m sal ta-center--m">
-               <h1 class="tw-ultrabold ta-center t-shadow-dark"><?php the_title(); ?></h1>
+               <h1 class="tw-ultrabold ta-center t-shadow-dark"><?php the_title(); ?> Resume Sample</h1>
             </div>
          </div>
       </div>
@@ -33,7 +33,7 @@ get_template_part('inc/navbar','page');
                   <div id="content" class="col-sm-12">
                      <section class="main-content mtm">
                         <?php while (have_posts()) : the_post(); ?>
-                           <span class="h2"><?php the_title(); ?></span>
+                           <span class="h2"><?php the_title(); ?> Resume Sample</span>
                            <?php the_content(); ?>
                         <?php endwhile; ?>
                      </section>          <!-- end of section with class main-content -->
