@@ -31,8 +31,6 @@ get_template_part('inc/navbar','page');
     </div>
     <div class="row">
         <div class="container">
-        
-            
             <div class="col-9of12 background-white  pam pbxl">
                 <div class="row">
                     <?php custom_breadcrumbs(); ?>
@@ -56,15 +54,14 @@ get_template_part('inc/navbar','page');
                     </div>
                     <?php if(get_field('resume_plain_text')){ ?>
                         <div class="row">
-                            <button id="plain-text-display" type="button" class="btn-a-f btn-blue-flat col-5 mhc tw-ultrabold paxs" > View Plain Text Resume </button>
+                                <button id="plain-text-display" type="button" class="btn-a-f btn-blue-flat col-5 mhc tw-ultrabold paxs" > View Plain Text Resume 
+                                </button>
                         </div>
                         <div class="row mtm" id="plain-text-sample" style="display:none;">
                             <?php the_field('resume_plain_text'); ?>
                         </div>
                     <?php } ?>
                         
-                        
-                    
                     <div class="row mtm">
                         <h3> Check out our articles with tips to better your resume:</h3>
                     </div>
