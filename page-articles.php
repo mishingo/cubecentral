@@ -88,7 +88,8 @@ get_template_part('inc/navbar','page');
                </div>
             </div>
          </div>
-         <div class="col-3of12 dn-m plm pbl">
+      </div>
+      <div class="col-3of12 dn-m plm pbl">
             <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
                 <div class="row">
                   <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
@@ -101,7 +102,6 @@ get_template_part('inc/navbar','page');
                 </div>
             </div>
          </div>
-      </div>
    </div>
 </div>
 <?php get_footer(); ?>
