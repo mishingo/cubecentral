@@ -32,7 +32,7 @@ get_template_part('inc/navbar','page');
                   <div class="col-sm-12">
                      <section class="main-content mtm">
                         <?php while (have_posts()) : the_post(); ?>
-                        <h2><?php the_title(); ?>Resume Sample</h2>
+                        <h2><?php the_title(); ?> Resume Sample</h2>
                         <?php the_content(); ?>
                         <?php endwhile; ?>
                      </section>          <!-- end of section with class main-content -->

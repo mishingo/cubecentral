@@ -32,15 +32,17 @@ get_template_part('inc/navbar','page');
                 
             <article class="mts plm prm ptm">
                <div class="row" id="primary">
-                  <div id="content" class="col-sm-12">
-                     <section class="main-content">
+                  <div class="col-sm-12">
+                     <div class="main-content">
                         <?php while (have_posts()) : the_post(); ?>
                            <span class="h2"><?php the_title(); ?></span>
                            <?php the_content(); ?>
                         <?php endwhile; ?>
-                     </section>
+                     </div>
                   </div>
                </div>
+            </article>
+            <div class="row plm prm ptm">
                <div class="row">
                   <h3> Check out our articles with tips to better your resume:</h3>
                </div>
@@ -74,7 +76,8 @@ get_template_part('inc/navbar','page');
                      <?php } ?>
                   <?php endforeach; endif;?>
                </div>
-            </article>           <!-- end of div with class row -->
+            </div>
+                       <!-- end of div with class row -->
          </div>
                
          <div class="col-3of12 dn-m">
@@ -92,5 +95,5 @@ get_template_part('inc/navbar','page');
          </div>
       </div>
    </div>
-</div>
+
 <?php get_footer(); ?>
