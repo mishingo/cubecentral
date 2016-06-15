@@ -55,7 +55,7 @@ get_template_part('inc/navbar','page');
             <div class="row">
                <div class="row mtm respond-half">
                   <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' ORDER BY rand() LIMIT 8" , 'OBJECT');?>
-                  <?php $i=0; ?>
+                  <?php $numItems = count($child_pages);$index =0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                   <?php
                      //echo get_the_post_thumbnail($pageChild->ID, 'thumbnail'); 
@@ -63,43 +63,51 @@ get_template_part('inc/navbar','page');
                      $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
                      //echo $post_thumbnail_url;                  
                   ?>
-                  <?php if($i % 4 == 0) { ?> 
-                     <div class="row mtxs">
-                  <?php } ?>
-                        <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
+                  <?php if($index % 4 == 0) { ?> 
+                        <div class="row mtxs">
+                     <?php } ?>
+                
+                       <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
                            <div class="table-all">
-                              <div class="table-cell-f ta-center">
-                                 <div class="background-secondary pas">
-                                    <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?>
-                                    </a>
-                                 </div>
-                              </div>
+                               <div class="table-cell-f ta-center">
+                                   <div class="background-primary pas">
+                                       <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
+                                   </div>
+                               </div>
                            </div>
                         </div>
-                     <?php $i++;  if( $i != 0 && $i % 4 == 0) { ?> 
-                     </div>
-                     <?php } ?>
-                     <?php if ($i == $len - 1) { ?>
-                     </div>
-                     <?php } ?>
+
+                  <?php  
+                     $index++;
+                     if( $index != 0) {
+                        if($index % 4 == 0 && $index != $numItems){
+                          
+                           echo "</div>";
+                        }
+                     }
+                     if($index === $numItems) { 
+                        echo "</div>";
+                     }
+                  ?>
+
                      <?php endforeach; endif;?>
                </div>
             </div>
          </div>
-      </div>
-      <div class="col-3of12 dn-m plm pbl">
-         <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
-            <div class="row">
-               <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
-            </div>
-            <div class="row mtm">
-               <img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
-            </div>
-            <div class="row mtm">
-               <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
+         <div class="col-3of12 dn-m plm pbl">
+            <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
+               <div class="row">
+                  <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
+               </div>
+               <div class="row mtm">
+                  <img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
+               </div>
+               <div class="row mtm">
+                  <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
+               </div>
             </div>
          </div>
-      </div>
+      </div> 
    </div>
 </div>
 <?php get_footer(); ?>
