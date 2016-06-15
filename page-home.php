@@ -69,7 +69,7 @@ $params = $_SERVER['QUERY_STRING'];
 	
 	<div class="container ptxl plm prm pbl ">
 		<div class="row ta-center tc-white">
-			<h1> Online Resume Builders </h1>
+			<h1> The Mobile Resume Builder </h1>
 			<h4 class="tw-normal mts"> We have a team of experts that have completed a research study to identify the key factors for an effective resume! </h4>
 		</div>
 		<div class="row pam ptl ta-center tc-white">
