@@ -19,7 +19,6 @@ get_template_part('inc/navbar','page');
             </div>
          </div>
       </div>
-            <!-- end of section with class feature-image feature-image-default -->
       <?php }?>
    </div>
    <div class="row">
@@ -28,13 +27,13 @@ get_template_part('inc/navbar','page');
             <div class="row">
                <?php custom_breadcrumbs(); ?>
             </div>    
-            <article class="mts">
+            <article class="mts row">
                <div class="row" id="primary">
                   <div id="content" class="col-sm-12">
                      <section class="main-content mtm">
                         <?php while (have_posts()) : the_post(); ?>
-                           <span class="h2"><?php the_title(); ?> Resume Sample</span>
-                           <?php the_content(); ?>
+                        <span class="h2"><?php the_title(); ?> Resume Sample</span>
+                        <?php the_content(); ?>
                         <?php endwhile; ?>
                      </section>          <!-- end of section with class main-content -->
                   </div>
@@ -52,11 +51,10 @@ get_template_part('inc/navbar','page');
                <div class="row mtm">
                   <h3> Check out our articles with tips to better your resume:</h3>
                </div>
-                    <!-- end of div with class row -->
             </article>
             <div class="row">
                <div class="row mtm respond-half">
-                  <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' ORDER BY rand() LIMIT 8" , 'OBJECT');    ?>
+                  <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' ORDER BY rand() LIMIT 8" , 'OBJECT');?>
                   <?php $i=0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                   <?php
@@ -82,26 +80,26 @@ get_template_part('inc/navbar','page');
                      </div>
                      <?php } ?>
                      <?php if ($i == $len - 1) { ?>
-                        </div>
+                     </div>
                      <?php } ?>
                      <?php endforeach; endif;?>
                </div>
             </div>
          </div>
-      </div>
-      <div class="col-3of12 dn-m plm pbl">
+         <div class="col-3of12 dn-m plm pbl">
             <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
-                <div class="row">
+               <div class="row">
                   <h2 class="tw-ultrabold t-shadow">Start your Resume Today!</h2>
-                </div>
-                <div class="row mtm">
+               </div>
+               <div class="row mtm">
                   <img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/resume.svg">
-                </div>
-                <div class="row mtm">
+               </div>
+               <div class="row mtm">
                   <a href="https://app.onlineresumebuilders.com/basicinfo?utm_source=sidebar" class="btn-a-f btn-yellow-flat pas h3 br-m">Start Now!</a>
-                </div>
+               </div>
             </div>
          </div>
+      </div>
    </div>
 </div>
 <?php get_footer(); ?>

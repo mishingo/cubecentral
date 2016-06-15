@@ -25,33 +25,7 @@
 <!-- <link rel="stylesheet" href="http://localhost:3000/app/index.css"> -->
 <?php wp_head(); ?>
 </head>
-<style>
-	.li1{
-		margin-left: 38px;
-	    list-style-type: disc;
-	    margin-top: 7px;
-	}
-	.p1{
-		margin: 10px 0px;
-	}
-	#l-sidebar-menu {
-	  margin-left: 20px;
-	}
-	#l-sidebar-menu li {
-	  border-bottom: 1px solid #cecece;
-	  padding: 6px 10px;
-	}
-	#l-sidebar-menu li:hover {
-	  background-color: #cecece;
-	}
-	#l-sidebar-menu li:last-child {
-	  border-bottom: 0px solid;
-	}
-	#l-sidebar-menu li a {
-	  font-weight: 400px;
-	}
 
-</style>
 
 <body class="wordpress">
 <div class="row">
