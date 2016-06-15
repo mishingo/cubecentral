@@ -48,7 +48,9 @@ get_template_part('inc/navbar','page');
                </div>
                <div class="row mtm respond-half">
                   <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' ORDER BY menu_order", 'OBJECT');    ?>
-                  <?php $i=0; ?>
+
+
+                  <?php $numItems = count($child_pages);$index =0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                   <?php
                      //echo get_the_post_thumbnail($pageChild->ID, 'thumbnail'); 
@@ -56,9 +58,11 @@ get_template_part('inc/navbar','page');
                      $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
                      //echo $post_thumbnail_url;                  
                   ?>
-                  <?php if($i % 4 == 0) { ?> 
-                     <div class="row mtxs">
-                  <?php } ?>
+                  
+                     <?php if($index % 4 == 0) { ?> 
+                        <div class="row mtxs">
+                     <?php } ?>
+                
                        <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
                            <div class="table-all">
                                <div class="table-cell-f ta-center">
@@ -68,18 +72,27 @@ get_template_part('inc/navbar','page');
                                </div>
                            </div>
                         </div>
-                     <?php $i++;  if( $i != 0 && $i % 4 == 0) { ?> 
-                        </div>
-                     <?php } ?>
-                     <?php if ($i == $len - 1) { ?>
-                        </div>
-                     <?php } ?>
+
+                  <?php  
+                     $index++;
+                     if( $index != 0) {
+                        if($index % 4 == 0 && $index != $numItems){
+                          
+                           echo "</div>";
+                        }
+                     }
+                     if($index === $numItems) { 
+                        echo "</div>";
+                     }
+                  ?>
+           
+              
+                  
+
                   <?php endforeach; endif;?>
                </div>
             </div>
-                       <!-- end of div with class row -->
          </div>
-               
          <div class="col-3of12 dn-m">
             <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
                <div class="row">
