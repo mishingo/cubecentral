@@ -38,7 +38,8 @@
 					</div>
 					<div class="row mts" id="footer-menu">
 						<ul>
-							<li>(888) 974-2891</li>
+							<li>(866)930-3205</li>
+							<li>199 E Flagler ST #214 Miami FL 33131</li>
 						</ul>
 					</div>
 				</div>
@@ -61,6 +62,32 @@
 <!-- endinject -->
 
 <?php wp_footer(); ?>
+
+
+
+
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+
+    ga('create', 'UA-54006220-12', 'auto');
+</script>
+<script>
+	var _gaq = _gaq || [];
+	_gaq.push(['_setAccount', 'UA-54006220-12']);
+	_gaq.push(['_setDomainName', 'onlineresumebuilders.com']);
+	_gaq.push(['_trackPageview']);
+</script>
+
 <script   src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script>
 <script>
 $( document ).ready(function() {
