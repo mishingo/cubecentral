@@ -24,7 +24,7 @@ get_template_part('inc/navbar','page');
       <?php }?>
    </div>
    <div class="row">
-      <div class="container">
+      <div class="container pls prs">
          <div class="col-9of12 background-white  pam pbxl">
             <div class="row">
                <?php custom_breadcrumbs(); ?>
