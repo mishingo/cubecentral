@@ -38,7 +38,7 @@
 					</div>
 					<div class="row mts" id="footer-menu">
 						<ul>
-							<li>(866)930-3205</li>
+							<li>(866) 930-3205</li>
 							<li>199 E Flagler ST #214 Miami FL 33131</li>
 						</ul>
 					</div>
