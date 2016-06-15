@@ -29,7 +29,7 @@ get_template_part('inc/navbar','page');
             </div>    
             <article class="mts row">
                <div class="row" id="primary">
-                  <div id="content" class="col-sm-12">
+                  <div class="col-sm-12">
                      <section class="main-content mtm">
                         <?php while (have_posts()) : the_post(); ?>
                         <span class="h2"><?php the_title(); ?></span>
