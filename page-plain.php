@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Parent-Template
+    Template Name: Plain-Template
 */
 $thumbnail_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 get_header();
@@ -42,56 +42,7 @@ get_template_part('inc/navbar','page');
                   </div>
                </div>
             </article>
-            <div class="row plm prm ptm">
-               <div class="row">
-                  <h3> Check out our articles with tips to better your resume:</h3>
-               </div>
-               <div class="row mtm respond-half">
-                  <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' ORDER BY menu_order", 'OBJECT');    ?>
 
-
-                  <?php $numItems = count($child_pages);$index =0; ?>
-                  <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
-                  <?php
-                     //echo get_the_post_thumbnail($pageChild->ID, 'thumbnail');
-                     $post_thumbnail_id = get_post_thumbnail_id($pageChild->ID);
-                     $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-                     //echo $post_thumbnail_url;
-                  ?>
-
-                     <?php if($index % 4 == 0) { ?>
-                        <div class="row mtxs">
-                     <?php } ?>
-
-                       <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
-                           <div class="table-all">
-                               <div class="table-cell-f ta-center">
-                                   <div class="background-primary pas">
-                                       <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
-                                   </div>
-                               </div>
-                           </div>
-                        </div>
-
-                  <?php
-                     $index++;
-                     if( $index != 0) {
-                        if($index % 4 == 0 && $index != $numItems){
-
-                           echo "</div>";
-                        }
-                     }
-                     if($index === $numItems) {
-                        echo "</div>";
-                     }
-                  ?>
-
-
-
-
-                  <?php endforeach; endif;?>
-               </div>
-            </div>
          </div>
          <div class="col-3of12 dn-m">
             <div class=" background-primary background-triangle-blue ptm pbm pls prs ta-center tc-white br-m sal mtm">
