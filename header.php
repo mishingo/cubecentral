@@ -19,7 +19,7 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 
- <link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-28a805360a.css">
+ <link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-6a4503a73b.css">
 
 
 <!-- <link rel="stylesheet" href="http://localhost:3000/app/index.css"> -->
