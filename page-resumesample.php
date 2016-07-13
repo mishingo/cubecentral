@@ -58,7 +58,7 @@ get_template_part('inc/navbar','page');
             </article>
             <div class="row">
                <div class="row mtm respond-half">
-                  <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' ORDER BY rand() LIMIT 8" , 'OBJECT');?>
+                  <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' AND post_status = 'publish' ORDER BY rand() LIMIT 8" , 'OBJECT');?>
                   <?php $numItems = count($child_pages);$index =0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                   <?php
