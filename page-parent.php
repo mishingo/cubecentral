@@ -47,7 +47,7 @@ get_template_part('inc/navbar','page');
                   <h3> Check out our articles with tips to better your resume:</h3>
                </div>
                <div class="row mtm respond-half">
-                  <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' ORDER BY menu_order", 'OBJECT');    ?>
+                  <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' AND post_status = 'publish' ORDER BY menu_order", 'OBJECT');    ?>
 
 
                   <?php $numItems = count($child_pages);$index =0; ?>
