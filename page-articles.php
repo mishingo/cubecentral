@@ -4,14 +4,14 @@
 */
 $thumbnail_url = wp_get_attachment_url(get_post_thumbnail_id($post->ID));
 get_header();
-get_template_part('inc/navbar','page'); 
+get_template_part('inc/navbar','page');
 ?>
 
 <!-- MAIN CONTENT -->
 
 <div class="row">
    <div class="row">
-      <?php if (has_post_thumbnail()){ ?>     
+      <?php if (has_post_thumbnail()){ ?>
       <div class="table">
          <div class="row mts table-cell-f article-hero" style="background-image: url(<?php echo $thumbnail_url; ?>);">
             <div class="ta-center tw-ultrabold tc-white pas plm prm br-m background-green col-7 mhc bbrr-m sal ta-center--m">
@@ -26,7 +26,7 @@ get_template_part('inc/navbar','page');
          <div class="col-9of12 background-white  pam pbxl">
             <div class="row">
                <?php custom_breadcrumbs(); ?>
-            </div>    
+            </div>
             <article class="mts row">
                <div class="row" id="primary">
                   <div class="col-sm-12">
@@ -40,14 +40,14 @@ get_template_part('inc/navbar','page');
                </div>
                <?php if(get_field('resume_plain_text')){ ?>
                <div class="row">
-                 <button id="plain-text-display" type="button" class="btn-a-f btn-blue-flat col-5 mhc tw-ultrabold paxs" > View Plain Text Resume 
+                 <button id="plain-text-display" type="button" class="btn-a-f btn-blue-flat col-5 mhc tw-ultrabold paxs" > View Plain Text Resume
                  </button>
                </div>
-               <div class="row mtm" id="plain-text-sample" style="display:none;">
+               <div class="row mtm" id="plain-text-sample">
                   <?php the_field('resume_plain_text'); ?>
                </div>
                <?php } ?>
-                        
+
                <div class="row mtm">
                   <h3> Check out our articles with tips to better your resume:</h3>
                </div>
@@ -58,15 +58,15 @@ get_template_part('inc/navbar','page');
                   <?php $numItems = count($child_pages);$index =0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
                   <?php
-                     //echo get_the_post_thumbnail($pageChild->ID, 'thumbnail'); 
+                     //echo get_the_post_thumbnail($pageChild->ID, 'thumbnail');
                      $post_thumbnail_id = get_post_thumbnail_id($pageChild->ID);
                      $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
-                     //echo $post_thumbnail_url;                  
+                     //echo $post_thumbnail_url;
                   ?>
-                  <?php if($index % 4 == 0) { ?> 
+                  <?php if($index % 4 == 0) { ?>
                         <div class="row mtxs">
                      <?php } ?>
-                
+
                        <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
                            <div class="table-all">
                                <div class="table-cell-f ta-center">
@@ -77,15 +77,15 @@ get_template_part('inc/navbar','page');
                            </div>
                         </div>
 
-                  <?php  
+                  <?php
                      $index++;
                      if( $index != 0) {
                         if($index % 4 == 0 && $index != $numItems){
-                          
+
                            echo "</div>";
                         }
                      }
-                     if($index === $numItems) { 
+                     if($index === $numItems) {
                         echo "</div>";
                      }
                   ?>
@@ -107,7 +107,7 @@ get_template_part('inc/navbar','page');
                </div>
             </div>
          </div>
-      </div> 
+      </div>
    </div>
 </div>
 <?php get_footer(); ?>

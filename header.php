@@ -18,9 +18,43 @@
 <meta name="google-site-verification" content="vAfjVwT9i38hKkLjZ7QyyXu2ffmPve6Uei8tHd1fDt0" />
 <link rel="profile" href="http://gmpg.org/xfn/11">
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
+<link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-6a4503a73b.css">
 
- <link rel="stylesheet" href="https://app.onlineresumebuilders.com/styles/app-6a4503a73b.css">
+<style>
+  .breadcrumbs li{
+    list-style-type: none;
+  }
+  ul.breadcrumbs{
+    margin-left:0;
+  }
+  ul{
+    margin-left: 35px;
+  }
+  ul li{
+    list-style-type: disc;
+  }
+  ul li a{
+    color: #006df0;
+  }
+  p img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .nav-list{
+    float:right;
+  }
+  .nav-list li{
+    margin-left: 0px;
+    list-style-type: none;
+    float: left;
+    padding:7px 16px;
+  }
+  .nav-list li .btn-start{
+    color:#000;
+  }
 
+</style>
 
 <!-- <link rel="stylesheet" href="http://localhost:3000/app/index.css"> -->
 <?php wp_head(); ?>
@@ -40,7 +74,5 @@
 	_gaq.push(['_trackPageview']);
 </script>
 </head>
-
-
 <body class="wordpress">
 	<div id="content" class="site-content">

@@ -47,7 +47,7 @@ get_template_part('inc/navbar','page');
                  <button id="plain-text-display" type="button" class="btn-a-f btn-blue-flat col-5 mhc tw-ultrabold paxs" > View Plain Text Resume
                  </button>
                </div>
-               <div class="row mtm" id="plain-text-sample" style="display:none;">
+               <div class="row mtm" id="plain-text-sample" >
                   <?php the_field('resume_plain_text'); ?>
                </div>
                <?php } ?>
@@ -58,6 +58,7 @@ get_template_part('inc/navbar','page');
             </article>
             <div class="row">
                <div class="row mtm respond-half">
+                  <ul>
                   <?php $child_pages = $wpdb->get_results("SELECT * FROM $wpdb->posts WHERE post_parent = ".wp_get_post_parent_id( $post_ID )."    AND post_type = 'page' AND post_status = 'publish' ORDER BY rand() LIMIT 8" , 'OBJECT');?>
                   <?php $numItems = count($child_pages);$index =0; ?>
                   <?php if ( $child_pages ) : foreach ( $child_pages as $pageChild ) : setup_postdata( $pageChild ); ?>
@@ -67,34 +68,12 @@ get_template_part('inc/navbar','page');
                      $post_thumbnail_url = wp_get_attachment_url( $post_thumbnail_id );
                      //echo $post_thumbnail_url;
                   ?>
-                  <?php if($index % 4 == 0) { ?>
-                        <div class="row mtxs">
-                     <?php } ?>
-
-                       <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
-                           <div class="table-all">
-                               <div class="table-cell-f ta-center">
-                                   <div class="background-primary pas">
-                                       <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
-                                   </div>
-                               </div>
-                           </div>
-                        </div>
-
-                  <?php
-                     $index++;
-                     if( $index != 0) {
-                        if($index % 4 == 0 && $index != $numItems){
-
-                           echo "</div>";
-                        }
-                     }
-                     if($index === $numItems) {
-                        echo "</div>";
-                     }
-                  ?>
+                  <li>
+                     <a href="<?php echo  $post_thumbnail_url ?>" title="<?php echo $pageChild->post_title; ?>" rel="bookmark"><?php echo $pageChild->post_title; ?></a>
+                  </li>
 
                      <?php endforeach; endif;?>
+                  </ul>
                </div>
             </div>
          </div>
