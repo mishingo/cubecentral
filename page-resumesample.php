@@ -69,7 +69,7 @@ get_template_part('inc/navbar','page');
                      //echo $post_thumbnail_url;
                   ?>
                   <li>
-                     <a href="<?php echo  $post_thumbnail_url ?>" title="<?php echo $pageChild->post_title; ?>" rel="bookmark"><?php echo $pageChild->post_title; ?></a>
+                     <a href="<?php echo  get_permalink($pageChild->ID); ?>" title="<?php echo $pageChild->post_title; ?>" rel="bookmark"><?php echo $pageChild->post_title; ?></a>
                   </li>
 
                      <?php endforeach; endif;?>
