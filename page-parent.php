@@ -25,12 +25,12 @@ get_template_part('inc/navbar','page');
    </div>
    <div class="row">
       <div class="container plm prm ">
-         <div class="col-9of12 background-white  ptm pbxl">
+         <div class="col-9of12 background-white  ptm pbl">
             <div class="row plm prm">
                <?php custom_breadcrumbs(); ?>
             </div>
 
-            <article class="mts plm prm ptm">
+            <article class="mts plm prm ">
                <div class="row" id="primary">
                   <div class="col-sm-12">
                      <div class="main-content">
@@ -42,11 +42,9 @@ get_template_part('inc/navbar','page');
                   </div>
                </div>
             </article>
-            <div class="row plm prm ptm">
+            <div class="row plm prm ">
+
                <div class="row">
-                  <h3> Check out our articles with tips to better your resume:</h3>
-               </div>
-               <div class="row mtm respond-half">
                   <?php $child_pages = $wpdb->get_results("SELECT *    FROM $wpdb->posts WHERE post_parent = ".$post->ID."    AND post_type = 'page' AND post_status = 'publish' ORDER BY menu_order", 'OBJECT');    ?>
 
 
@@ -59,25 +57,43 @@ get_template_part('inc/navbar','page');
                      //echo $post_thumbnail_url;
                   ?>
 
-                     <?php if($index % 4 == 0) { ?>
-                        <div class="row mtxs">
+                     <?php if($index % 3 == 0) { ?>
+                        <div class="row mtm">
                      <?php } ?>
 
-                       <div class="child-thumb col-3of12 pull mtm--m" style="background-image:url(<?php echo  $post_thumbnail_url ?>)">
-                           <div class="table-all">
-                               <div class="table-cell-f ta-center">
-                                   <div class="background-primary pas">
-                                       <a class="tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
-                                   </div>
-                               </div>
+
+
+                        <div class="col-4of12 mtm--m pull">
+                           <div class="row sad br-m">
+                              <div class="row background-secondary pas plm prm btrr-m btlr-m card-head">
+                                 <div class="card-title  ">
+
+                                       <a class=" tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>"><?php echo $pageChild->post_title; ?></a>
+
+                                 </div>
+                                 <div class="card-circle">
+                                    <a class=" tc-white tw-bold t-shadow" href="<?php echo  get_permalink($pageChild->ID); ?>" rel="bookmark" title="<?php echo $pageChild->post_title; ?>">
+                                     <div class="background-green sal card-circle-container" style="">
+                                        <p class="circle-in-card tc-white"><i class="i-eye"></i> </p>
+                                     </div>
+                                    </a>
+                                 </div>
+                              </div>
+
+                              <div class="row pam bbrr-m bblr-m background-white card-body">
+
+                                    <p><?php echo $pageChild->post_excerpt; ?></p>
+                                    <a href="<?php echo  get_permalink($pageChild->ID); ?>"><small>View More</small></a>
+
+                              </div>
+
                            </div>
                         </div>
 
                   <?php
                      $index++;
                      if( $index != 0) {
-                        if($index % 4 == 0 && $index != $numItems){
-
+                        if($index % 3 == 0 && $index != $numItems){
                            echo "</div>";
                         }
                      }

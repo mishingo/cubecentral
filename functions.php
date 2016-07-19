@@ -42,6 +42,7 @@ function oscar_batlle_setup() {
 	 */
 	add_theme_support( 'post-thumbnails' );
 
+
     add_filter('nav_menu_css_class' , 'nav_menu_add_post_status_class' , 10 , 2);
     function nav_menu_add_post_status_class($classes, $item){
         $post_status = get_post_status($item->object_id);
@@ -103,6 +104,10 @@ function oscar_batlle_content_width() {
 }
 add_action( 'after_setup_theme', 'oscar_batlle_content_width', 0 );
 
+add_action('init', 'my_custom_init');
+function my_custom_init() {
+	add_post_type_support( 'page', 'excerpt' );
+}
 /**
  * Register widget area.
  *
