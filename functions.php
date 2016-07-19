@@ -131,6 +131,7 @@ add_action( 'widgets_init', 'oscar_batlle_widgets_init' );
  */
 function oscar_batlle_scripts() {
 	//wp_enqueue_style( 'oscar-batlle-style', get_template_directory_uri() . '/public/css/app.min.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/public/css/style.css' );
 
 	//wp_enqueue_script( 'oscar-batlle-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
 
