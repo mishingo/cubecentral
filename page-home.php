@@ -44,8 +44,7 @@ $params = $_SERVER['QUERY_STRING'];
 
 			<div class="row ta-center tc-white pls prs">
 				<h2 class="tw-bold h1 t-shadow">Build your perfect <strong>resume!</strong></h2>
-				<span class="h4 tw-bold tc-white"> It only takes 5 minutes.</span>
-				<p class="h4 tw-light mtm">Create a resume in under 5 minutes with our professional resume builder. Land your next job with unbeatable resume template. </p>
+				<p class="h4 tw-light mtm col-7 mhc">Create a resume in under 5 minutes with our professional resume builder. Land your next job with unbeatable resume template. </p>
 
 
 				<div class="row mtl ng-scope" >
