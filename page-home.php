@@ -3,7 +3,7 @@
     Template Name: Home Page
 */
 
-get_header(); 
+get_header();
 
 $params = $_SERVER['QUERY_STRING'];
 ?>
@@ -15,7 +15,7 @@ $params = $_SERVER['QUERY_STRING'];
 	  		<div class="row bottom dn-m">
 	  			<div class="col-3of12">
 	  				<p class="ta-center mrm sal tc-white background-primary btrr-m btlr-m tw-ultrabold paxs">Need help? (866) 930-3205</p>
-	  			
+
 	  			</div>
 	  		</div>
 	    	<div class="row pas dont-respond">
@@ -35,7 +35,7 @@ $params = $_SERVER['QUERY_STRING'];
             <?php endif; ?>
 						</div>
             		</div>
-           		</div>   
+           		</div>
 	    	</div>
 	  	</div>
 	</nav>
@@ -44,10 +44,10 @@ $params = $_SERVER['QUERY_STRING'];
 
 			<div class="row ta-center tc-white pls prs">
 				<h2 class="tw-bold h1 t-shadow">Build your perfect <strong>resume!</strong></h2>
-				<h4 class="tw-bold tc-white"> It only takes 5 minutes.</h4>
-				<h4 class="tw-light mtm">We make it fast and easy to create the powerful, professional resume, hiring managers are looking for. </h4>
+				<span class="h4 tw-bold tc-white"> It only takes 5 minutes.</span>
+				<p class="h4 tw-light mtm">Create a resume in under 5 minutes with our professional resume builder. Land your next job with unbeatable resume template. </p>
 
-			
+
 				<div class="row mtl ng-scope" >
             <?php if ($params) : ?>
             <a class="btn-a-f-round mhc col-4 pam-1 ta-center h3 btn-yellow-grad" href="https://app.onlineresumebuilders.com/basicinfo?<?php echo $params; ?>"> Create Resume Now </a>
@@ -66,7 +66,7 @@ $params = $_SERVER['QUERY_STRING'];
 </section>
 
 <section class="row sec-2 pbxl ng-scope">
-	
+
 	<div class="container ptxl plm prm pbl ">
 		<div class="row ta-center tc-white">
 			<h1> The Mobile Resume Builder </h1>
@@ -90,7 +90,7 @@ $params = $_SERVER['QUERY_STRING'];
 			</div>
 		</div>
 	</div>
-	
+
 </section>
 <section class="row sec-3 ng-scope">
 	<div class="container plm prm ptl pbxl">
@@ -117,10 +117,9 @@ $params = $_SERVER['QUERY_STRING'];
       <?php endif; ?>
 		</div>
 	</div>
-</section> 
+</section>
 
 </div>
 </form></div>
 
 <?php get_footer(); ?>
-
