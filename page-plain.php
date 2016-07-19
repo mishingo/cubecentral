@@ -35,7 +35,9 @@ get_template_part('inc/navbar','page');
                   <div class="col-sm-12">
                      <div class="main-content">
                         <?php while (have_posts()) : the_post(); ?>
-                           <span class="h2"><?php the_title(); ?></span>
+                           <?php if (!has_post_thumbnail()){ ?>
+                           <h1 class="h2"><?php the_title(); ?></h1>
+                           <?php }?>
                            <?php the_content(); ?>
                         <?php endwhile; ?>
                      </div>
