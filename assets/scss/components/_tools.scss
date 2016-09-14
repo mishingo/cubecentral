@@ -1,0 +1,231 @@
+.border-left{
+   border-left:4px solid $primary-color;
+}
+.br-s{
+   border-radius:3px;
+}
+.br-m{
+   border-radius:6px;
+}
+
+.dash-item.active{
+   @extend .grey;
+   @extend .darken-2;
+}
+.dash-item{
+   &:hover{
+      @extend .grey;
+      @extend .darken-3;
+   }
+}
+
+.classic-list{
+   margin-left: 40px;
+   li{
+
+      list-style-type: disc;
+   }
+}
+
+.joblisting-color{
+   padding-bottom: $b-space-xl+15 !important;
+   @media #{$medium-and-up} {
+      padding-bottom: $b-space !important;
+   }
+}
+.joblisting-article{
+   margin-top:-100px;
+   @media #{$medium-and-up} {
+      margin-top:-200px;
+   }
+}
+
+.avatar-icon{
+   border-radius: 3em;
+   height: 50px;
+   width: 50px;
+   display: inline-block;
+   background-size: cover;
+   background-position: center center;
+   border: 3px solid #fff;
+   vertical-align: middle;
+}
+.avatar-preview{
+   border-radius:3em;height:200px;width:200px;background-size:cover;background-position:center center;
+}
+
+.inline-block{
+   display: inline-block;
+}
+
+.table{
+		display: table;
+		//border-collapse: collapse;
+		width: 100%;
+		margin: 0;
+		padding: 0;
+		list-style: none;
+}
+.just-table{
+	display: table;
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+.table-row{
+	display: table-row;
+}
+.table-cell{
+	display: table-cell;
+	width: 1%;
+	vertical-align: bottom;
+}
+.table-cell-f{
+	display: table-cell;
+	vertical-align: middle;
+	@media #{$medium-and-up}{
+		display: table-cell;
+		vertical-align: middle;
+	}
+	@media print{
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+.table-cell-f-left{
+
+	@media #{$medium-and-up}{
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+	}
+}
+.table-cell-f-bottom{
+		text-align: center;
+	@media #{$medium-and-up}{
+		display: table-cell;
+		vertical-align: bottom;
+		text-align: left;
+	}
+}
+.table-cell-f-bottom-center{
+		text-align: center;
+	@media #{$medium-and-up}{
+		display: table-cell;
+		vertical-align: bottom;
+		text-align: center;
+	}
+}
+
+.q-subsection{
+   display:none;
+}
+.q-subsection.active{
+      display:block;
+      transition: opacity 1s ease-in-out;
+}
+
+.no-fluff{
+   margin:0;
+   padding:0;
+}
+
+.help-cursor{
+   cursor: help;
+}
+
+.hero2{
+   @media #{$medium-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero2.png);
+      background-size: contain;
+      background-position: right center;
+      background-repeat: no-repeat;
+
+   }
+   @media #{$large-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero2.png);
+      background-size: contain;
+      background-position: right center;
+      background-repeat: no-repeat;
+      height:400px;
+   }
+
+   @media #{$xlarge-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero2.png);
+      background-size: contain;
+      background-position: right center;
+      background-repeat: no-repeat;
+      height:500px;
+   }
+}
+
+.hero-cabinet{
+   background-image:linear-gradient(90deg, #227DB7 0%, #166196 98%);
+   @media #{$medium-and-up}{
+      background-image: linear-gradient(90deg, #227DB7 0%, #166196 98%);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+   }
+   @media #{$large-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/cabinet.jpg), linear-gradient(90deg, #227DB7 0%, #166196 98%);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+   }
+
+   @media #{$xlarge-and-up}{
+
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/cabinet.jpg), linear-gradient(90deg, #227DB7 0%, #166196 98%);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+   }
+}
+.hero3{
+   @media #{$large-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero3.png);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+      height: 400px;
+   }
+
+   @media #{$xlarge-and-up}{
+
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero3.png);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+   }
+}
+
+.hero4{
+   @media #{$large-and-up}{
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero4.png);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+      height: 400px;
+   }
+
+   @media #{$xlarge-and-up}{
+
+      background-image: url(https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/hero4.png);
+      background-size: contain;
+      background-position: left center;
+      background-repeat: no-repeat;
+
+   }
+}
+
+.menu{
+   ul li{
+      a{
+         color:#fff;
+      }
+   }
+}

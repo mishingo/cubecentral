@@ -10,13 +10,26 @@ const reload = browserSync.reload;
 
 
 
+gulp.task('styles', () => {
+  return gulp.src('assets/scss/*.scss')
+    .pipe($.plumber())
+    .pipe($.sourcemaps.init())
+    .pipe($.sass.sync({
+      outputStyle: 'expanded',
+      precision: 10,
+      includePaths: ['.']
+    }).on('error', $.sass.logError))
+    .pipe($.autoprefixer({browsers: ['last 1 version']}))
+    .pipe($.sourcemaps.write())
+    .pipe(gulp.dest('public/css'))
+    .pipe(reload({stream: true}));
+});
 
-
-gulp.task('serve', () => {
+gulp.task('serve',['styles'], () => {
   browserSync({
-    notify: false,
+    notify: true,
     port: 9000,
-    proxy: "orb.blog"
+    proxy: "tl-wordpress.app"
   });
 
   gulp.watch([
@@ -24,5 +37,5 @@ gulp.task('serve', () => {
     'inc/*.php'
   ]).on('change', reload);
 
+  gulp.watch('assets/scss/**/*.scss', ['styles']);
 });
-

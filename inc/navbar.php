@@ -1,30 +1,34 @@
-<nav class="row background-primary ">
-    <div class="container">
-        <div class="row paxs plm prl dont-respond">
-            <div class="col-7of12">
-                <a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-                    <img src="https://s3.amazonaws.com/localstaffing-resources/orb/img/logo-small.svg">
-                </a>
-            </div>
-            <div class="col-3of12 dn-d push--m">
-                <i id="mobile-menu-action" class="i-menu--m push--m"></i>
-            </div>
-            <div class="col-5of12 dn-m">
-                <ul class="nav-list">
-                    <li><a class="tc-white ta-center" href="https://app.onlineresumebuilders.com/login">Login</a> </li>
-                    <li><a class="background-tertiary ta-center  br-30 plm prm paxs btn-start" href="https://app.onlineresumebuilders.com/basicinfo"> Get Started</a> </li>
-                <ul>
-            </div>
-        </div>
-    </div>
-    <div class="row background-secondary dn-m">
-        <div class="container plm prm">
-        <?php wp_nav_menu( array( 'theme_location' => 'parent-bar', 'menu_id' => 'parent-bar' ) ); ?>
-        </div>
-    </div>
-    <div class="row background-secondary" id="mobile-menu-display" >
-        <div class="container plm prm">
+<nav class="indigo">
+  <div class="container">
+    <div class="nav-wrapper">
+      <a href="#!" class="brand-logo"><img src="https://s3.amazonaws.com/localstaffing-resources/templatelegal/img/logo-white.svg" alt="Template Legal"></a>
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="sass.html">Sass</a></li>
+        <li><a href="badges.html">Components</a></li>
+        <li><a href="collapsible.html">Javascript</a></li>
+        <li><a href="mobile.html">Mobile</a></li>
+      </ul>
+      <ul class="side-nav" id="mobile-demo">
+        <li><a href="sass.html">Sass</a></li>
         <?php wp_nav_menu( array( 'theme_location' => 'home-menu', 'menu_id' => 'mobile-menu-bar' ) ); ?>
-        </div>
+      </ul>
     </div>
+  </div>
+</nav>
+
+
+<nav class="row indigo darken-3 ">
+  <div class="container">
+
+    <?php
+      wp_nav_menu( array(
+          'menu' => 'subnav',
+          'theme_location'=>'subnav',
+          'menu_id' => 'subnav',
+          'menu_class' => 'hide-on-med-and-down',
+          'walker' => new wp_materialize_navwalker()
+      ));
+    ?>
+  </div>
 </nav>

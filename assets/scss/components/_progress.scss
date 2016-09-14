@@ -1,0 +1,183 @@
+/* Wrapper des Progress Trackers */
+
+#basketProgressTrackerWrapper {
+  width: 100%;
+  height: 50px;
+  overflow: hidden;
+  font-size: 13px;
+  margin: 20px auto;
+  border-radius:6px;
+}
+
+
+/* UL der Tracker Positionen */
+
+.basketProgressTracker {
+  background-color:#94a8ff;
+  padding: 0;
+  margin: 0;
+  height: 50px;
+  margin-top: 1px;
+  display:table;
+  width:100%;
+}
+
+
+/* Die einzelnen Punkte */
+
+.basketProgressTrackerPos {
+  display: table-cell;
+  /* inline-block hat einen default margin-left von 4px
+  dieser wird hierdurch entfernt somit reihen sich die
+  Elemente direkt aneinander */
+  margin-left: -4px;
+  line-height: 50px;
+  box-sizing: border-box;
+  position: relative;
+  padding-left: 15px;
+  padding-right: 15px;
+
+}
+
+.basketProgressTrackerPos:first-child {
+  padding-left: 5px;
+}
+
+
+/* der Counter der einzelnen Punkte */
+
+.basketProgressTrackerPos span[data-pos]:before {
+  content: attr(data-pos);
+  margin-left: 9px;
+  margin-right: 5px;
+  background-color: #fff;
+  display: block;
+  float: left;
+  margin-top: 15px;
+  text-align: center;
+  line-height: 20px;
+  vertical-align: middle;
+  height: 20px;
+  width: 20px;
+  border-radius: 10px;
+  font-weight: bold;
+  color: #233071;
+}
+
+
+
+/* Alles in den spans in großbuchstaben  */
+
+.basketProgressTrackerPos > span {
+  text-transform: uppercase;
+}
+
+
+/* Setzt die Hintergrundfarbe des activen Zahlenkreises auf Orange */
+
+.active.basketProgressTrackerPos > span[data-pos]:before {
+  background-color: #f29400;
+  color:#fff;
+}
+
+
+/* Setzt die Schriftfarbe der aktiven Position auf Orange */
+
+.active.basketProgressTrackerPos > span {
+  color: #233071;
+  font-weight: 900;
+}
+
+
+/* Entfernt die Border des ersten und des letzten Punktes */
+
+.basketProgressTrackerPos:last-child:after,
+.basketProgressTrackerPos:last-child:before {
+  border: 0;
+}
+
+
+/* Erzeugt die Spitze auf der rechten Seite */
+
+
+
+
+/* Hierdurch wird die spitze zu einer art Icon */
+
+
+
+/* Entfernt die -4px margin beim ersten Listen-Element siehe .basketProgressTrackerPos */
+
+.basketProgressTrackerPos:first-child {
+  margin-left: 0;
+}
+
+
+/* Erstellt den Signpost effekt wenn das Element aktiv ist */
+
+.active.basketProgressTrackerPos:after {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 100%;
+  top: 0;
+  border: 25px solid #FFD900;
+  border-top-color: transparent;
+  border-bottom-color: transparent;
+  border-right-color: transparent;
+  border-left-width: 15px;
+}
+
+
+/* Erstellt den Signpost effekt wenn das Element aktiv ist */
+
+/*.active.basketProgressTrackerPos:before {
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  border: 27px solid #FFD900;
+  border-left-color: #94a8ff;
+  border-left-width: 15px;
+  border-top-color: #FFD900;
+  border-top-width: 25px;
+  border-bottom-color: #FFD900;
+  border-right-color: transparent;
+  z-index: 1;
+}*/
+.active.basketProgressTrackerPos:before{
+  content: '';
+  width: 0;
+  height: 0;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 1;
+}
+.active.basketProgressTrackerPos:not(:first-child):before{
+  border: 27px solid #FFD900;
+  border-left-color: #94a8ff;
+  border-left-width: 15px;
+  border-top-color: #FFD900;
+  border-top-width: 25px;
+  border-bottom-color: #FFD900;
+  border-right-color: transparent;
+}
+
+
+.active.basketProgressTrackerPos {
+  background-color: #FFD900;
+}
+
+
+.done.basketProgressTrackerPos > span[data-pos]:before {
+  content: '\2713';
+  color:#3f51b5;
+  font-family: FontAwesome;
+  background-color: #a1ff00;
+  font-weight: 900;
+  line-height: 22px;
+}

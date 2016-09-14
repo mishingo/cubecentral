@@ -53,8 +53,8 @@ function oscar_batlle_setup() {
 	register_nav_menus( array(
 		'primary' => esc_html__( 'Primary Menu', 'oscar-batlle' ),
 		'l-sidebar' => esc_html__( 'l-sidebar'),
-        'home-menu' => esc_html__( 'home-menu'),
-        'parent-bar' => esc_html__( 'parent-bar'),
+      'home-menu' => esc_html__( 'home-menu'),
+      'subnav' => esc_html__( 'subnav'),
 		'footer-1' => esc_html__( 'footer-1'),
 		'footer-b' => esc_html__( 'footer-b')
 	) );
@@ -131,9 +131,11 @@ add_action( 'widgets_init', 'oscar_batlle_widgets_init' );
  */
 function oscar_batlle_scripts() {
 	//wp_enqueue_style( 'oscar-batlle-style', get_template_directory_uri() . '/public/css/app.min.css' );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/public/css/style.css' );
+	wp_enqueue_style( 'style', get_template_directory_uri() . '/public/css/main.css' );
 
-	//wp_enqueue_script( 'oscar-batlle-navigation', get_template_directory_uri() . '/assets/js/navigation.js', array(), '20120206', true );
+	wp_enqueue_script( 'jqueryx', get_template_directory_uri() . '/public/js/jquery.min.js');
+	wp_enqueue_script( 'materialjs', get_template_directory_uri() . '/public/js/materialize.min.js');
+	wp_enqueue_script( 'main', get_template_directory_uri() . '/public/js/main.js');
 
 	//wp_enqueue_script( 'oscar-batlle-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
@@ -148,6 +150,8 @@ add_action( 'wp_enqueue_scripts', 'oscar_batlle_scripts' );
  */
 require get_template_directory() . '/inc/custom-header.php';
 
+// Register Custom Navigation Walker
+ require_once get_template_directory() . '/wp_materialize_navwalker.php';
 /**
  * Custom template tags for this theme.
  */

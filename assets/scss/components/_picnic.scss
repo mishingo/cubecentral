@@ -1,0 +1,31 @@
+
+.picnic-parent{
+   position: relative;
+   overflow: hidden;
+}
+/*.picnic-control{
+   margin-left:0%;
+}
+*/
+
+.picnic-control{
+   transition: all .3s ease;
+}
+.picnic-settings{
+   //left: -300%;
+   //left: 0%;
+}
+.picnic-row{
+   display: table;
+   table-layout: fixed;
+   position: relative;
+   padding-left: 0;
+   transition: all .3s;
+   border-spacing: 0;
+}
+.picnic-cell{
+   overflow: visible;
+   display: table-cell;
+   width: 100%;
+   transition: all .3s ease;
+}
