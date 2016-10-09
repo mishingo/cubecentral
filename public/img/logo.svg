@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="352px" height="94px" viewBox="0 0 352 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 3</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <text id="text-1" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FF5A1C">
+            <tspan x="0" y="42">CUBE</tspan>
+            <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
+        </text>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
+            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
+            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0.97254902   0 0 0 0 0.345098039   0 0 0 0 0.109803922  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
+            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
+            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Desktop-HD-Copy-3" transform="translate(-111.000000, -9.000000)">
+            <g id="Group-3" transform="translate(139.000000, 27.000000)">
+                <g id="CUBE-CENTRAL" filter="url(#filter-2)" stroke="#F8581C">
+                    <use fill="#FF5A1C" fill-opacity="1" stroke-opacity="1" filter="url(#filter-3)" xlink:href="#text-1"></use>
+                    <use fill="#FF5A1C" fill-opacity="1" stroke-opacity="1" xlink:href="#text-1"></use>
+                    <use xlink:href="#text-1"></use>
+                </g>
+                <text id="CUBE-CENTRAL" stroke="#F8581C" filter="url(#filter-5)" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FF5A1C">
+                    <tspan x="0" y="42">CUBE</tspan>
+                    <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
+                </text>
+                <text id="CUBE-CENTRAL" stroke="#FF966F" stroke-width="2" filter="url(#filter-7)" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FFCFBC">
+                    <tspan x="0" y="42">CUBE</tspan>
+                    <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
+                </text>
+            </g>
+        </g>
+    </g>
+</svg>

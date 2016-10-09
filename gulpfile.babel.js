@@ -29,7 +29,7 @@ gulp.task('serve',['styles'], () => {
   browserSync({
     notify: true,
     port: 9000,
-    proxy: "tl-wordpress.app"
+    proxy: "cube.blog"
   });
 
   gulp.watch([
