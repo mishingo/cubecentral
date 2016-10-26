@@ -12,6 +12,7 @@
     "gulp-autoprefixer": "*",
     "gulp-babel": "*",
     "gulp-cache": "*",
+    "gulp-concat": "^2.6.0",
     "gulp-cssnano": "*",
     "gulp-eslint": "*",
     "gulp-htmlmin": "*",

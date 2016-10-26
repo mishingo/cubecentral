@@ -2,7 +2,7 @@
 import gulp from 'gulp';
 import gulpLoadPlugins from 'gulp-load-plugins';
 import browserSync from 'browser-sync';
-
+import concat from 'gulp-concat';
 
 const $ = gulpLoadPlugins();
 const reload = browserSync.reload;
@@ -24,8 +24,12 @@ gulp.task('styles', () => {
     .pipe(gulp.dest('public/css'))
     .pipe(reload({stream: true}));
 });
-
-gulp.task('serve',['styles'], () => {
+gulp.task('js', () => {
+  return gulp.src( ['assets/js/jquery.min.js','assets/js/materialize.min.js', 'assets/js/modal-post.js' ,'assets/js/main.js'])
+  .pipe(concat('vendor.js'))
+  .pipe(gulp.dest('public/js'));
+});
+gulp.task('serve',['styles', 'js'], () => {
   browserSync({
     notify: true,
     port: 9000,
@@ -38,4 +42,5 @@ gulp.task('serve',['styles'], () => {
   ]).on('change', reload);
 
   gulp.watch('assets/scss/**/*.scss', ['styles']);
+  gulp.watch('assets/js/*.js', ['js']);
 });

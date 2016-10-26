@@ -133,9 +133,9 @@ function oscar_batlle_scripts() {
 	//wp_enqueue_style( 'oscar-batlle-style', get_template_directory_uri() . '/public/css/app.min.css' );
 	wp_enqueue_style( 'style', get_template_directory_uri() . '/public/css/main.css' );
 
-	wp_enqueue_script( 'jqueryx', get_template_directory_uri() . '/public/js/jquery.min.js');
-	wp_enqueue_script( 'materialjs', get_template_directory_uri() . '/public/js/materialize.min.js');
-	wp_enqueue_script( 'main', get_template_directory_uri() . '/public/js/main.js');
+
+	//wp_enqueue_script( 'materialjs', get_template_directory_uri() . '/public/js/materialize.min.js');
+	wp_enqueue_script( 'vendor', get_template_directory_uri() . '/public/js/vendor.js','','',true);
 
 	//wp_enqueue_script( 'oscar-batlle-skip-link-focus-fix', get_template_directory_uri() . '/assets/js/skip-link-focus-fix.js', array(), '20130115', true );
 
