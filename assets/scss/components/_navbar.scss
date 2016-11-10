@@ -304,7 +304,16 @@ nav.mininav {
 }
 
 
-
+.navcell-a{
+  width:130px;
+  height:130px;
+  float: left;
+}
+.navcell-b{
+  padding-left: 130px;
+  width: calc(100% - 130px);
+  float:left;
+}
 
 .hero{
   background: url(https://media.giphy.com/media/3oEduOOq2VZhvNfZ6w/giphy.gif) no-repeat center center fixed;

@@ -33,7 +33,7 @@ gulp.task('serve',['styles', 'js'], () => {
   browserSync({
     notify: true,
     port: 9000,
-    proxy: "cube.blog"
+    proxy: "homeguideblog.blog"
   });
 
   gulp.watch([

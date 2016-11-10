@@ -18,7 +18,7 @@ html{
     font-size: 14px;
   }
 
-  font-family: 'Lato', sans-serif;
+  font-family: 'Roboto', sans-serif;
   font-weight: normal;
   color: $off-black;
 }
@@ -84,11 +84,10 @@ small { font-size: 75%; }
 	font-weight: 900 !important;
 }
 
-.vhs-font{
-  font-family: 'VT323', monospace;
-  font-size:1.3em;
-}
 
+.roboto-tall{
+  font-family: 'Roboto Condensed', sans-serif;
+}
 .red-links{
   li{
     a{
