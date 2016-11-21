@@ -27,6 +27,42 @@
    }
 }
 
+.overflow-hidden{
+   overflow: hidden;
+}
+
+.nav-list{
+   position:relative;
+   font-family: 'Roboto Condensed', roboto, sans-serif;
+   margin:0;
+   li{
+      @extend .tw-bold;
+      float:left;
+      border-right: 2px solid #515151;
+      padding:0px 9px;
+      &:first-child{
+         padding:0px 0px;
+         border-right: 0px solid;
+      }
+      &:last-child{
+         border-right: 0px solid;
+      }
+   }
+}
+
+.nav-main-list{
+   position:relative;
+   font-family: 'Roboto Condensed', roboto, sans-serif;
+   margin:0;
+   li{
+      @extend .tw-bold;
+      line-height: 2.1;
+      float:left;
+      padding:0px 15px;
+      font-size: 2.3em;
+   }
+}
+
 .joblisting-color{
    padding-bottom: $b-space-xl+15 !important;
    @media #{$medium-and-up} {
@@ -261,4 +297,13 @@
 
 .image-tiny{
    height:40px;
+}
+
+.trending-bar{
+   white-space: nowrap;
+   overflow-x: auto;
+   overflow-y: hidden;
+   &::-webkit-scrollbar {
+    display: none; 
+   }
 }

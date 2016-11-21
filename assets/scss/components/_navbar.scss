@@ -304,13 +304,14 @@ nav.mininav {
 }
 
 
-.navcell-a{
-  width:130px;
-  height:130px;
-  float: left;
+.navcell-aa{
+  @media #{$large-and-up} {
+    width:130px;
+    height:130px;
+    float: left;
+  }
 }
 .navcell-b{
-  padding-left: 130px;
   width: calc(100% - 130px);
   float:left;
 }
