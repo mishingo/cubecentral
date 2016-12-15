@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Oscar Batlle
+ * @package HGB
  */
 
 get_header();
@@ -113,5 +113,5 @@ get_template_part('inc/navbar','page');
     <!-- close row primary-->
 </div>
 <!-- close container -->
-
+<?php get_template_part('inc/popunder','page'); ?>
 <?php get_footer(); ?>

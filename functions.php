@@ -1,10 +1,10 @@
 <?php
 /**
- * Oscar Batlle functions and definitions.
+ * HGB functions and definitions.
  *
  * @link https://codex.wordpress.org/Functions_File_Explained
  *
- * @package Oscar Batlle
+ * @package HGB
  */
 
 if ( ! function_exists( 'oscar_batlle_setup' ) ) :
@@ -19,7 +19,7 @@ function oscar_batlle_setup() {
 	/*
 	 * Make theme available for translation.
 	 * Translations can be filed in the /languages/ directory.
-	 * If you're building a theme based on Oscar Batlle, use a find and replace
+	 * If you're building a theme based on HGB, use a find and replace
 	 * to change 'oscar-batlle' to the name of your theme in all the template files
 	 */
 	load_theme_textdomain( 'oscar-batlle', get_template_directory() . '/languages' );

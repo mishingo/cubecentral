@@ -9,20 +9,21 @@
 		<div class="navcell-b black-text">
 			<div class="row grey lighten-4 pl-m--s pr-m--s pa-xs--s trending-bar">
 				<ul class="nav-list" style="width:1000px;">
-					<li class="green-text text-darken-3">Trending:</li>
-					<li class="grey-text text-darken-3">How to Not be a Fat Fuck</li>
-					<li class="grey-text text-darken-3">How to Not be a Fat Fuck</li>
-					<li class="grey-text text-darken-3">How to Not be a Fat Fuck</li>
-					<li class="grey-text text-darken-3">How to Not be a Fat Fuck</li>
-					<li class="grey-text text-darken-3">How to Not be a Fat Fuck</li>
+					<li><a class="green-text text-darken-3">Trending:</li>
+					<li><a class="grey-text text-darken-3">How to Not be a Fat Fuck</a></li>
+					<li><a class="grey-text text-darken-3">How to Not be a Fat Fuck</a></li>
+					<li><a class="grey-text text-darken-3">How to Not be a Fat Fuck</a></li>
+					<li><a class="grey-text text-darken-3">How to Not be a Fat Fuck</a></li>
+					<li><a class="grey-text text-darken-3">How to Not be a Fat Fuck</a></li>
 
 				</ul>
 			</div>
 			<div class="row pa-s--s" >
 				<ul class="nav-main-list">
-					<li class="green-text text-darken-3">How-To-Guides</li>
-					<li class="grey-text text-darken-3">Experts Corner</li>
-					<li class="grey-text text-darken-3">Save Money</li>
+					<li><a href="/how-to/" class="green-text text-darken-3">How-To-Guides</a></li>
+					<li><a href="/experts-corner/" class="grey-text text-darken-3">Experts Corner</a></li>
+					<li><a href="/save-money/" class="grey-text text-darken-3">Save Money</a></li>
+					<li><a href="/health-tips/" class="grey-text text-darken-3">Health Tips</a></li>
 				</ul>
 			</div>
 		</div>
@@ -34,16 +35,16 @@
 		  <a href="#!" class="brand-logo"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo-mobile.svg"></a>
 		  <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 		  <ul class="right hide-on-med-and-down">
-			 <li><a href="sass.html">Sass</a></li>
-			 <li><a href="badges.html">Components</a></li>
-			 <li><a href="collapsible.html">Javascript</a></li>
-			 <li><a href="mobile.html">Mobile</a></li>
+			 <li><a href="/how-to/" class="green-text text-darken-3">How-To-Guides</a></li>
+ 			 <li><a href="/experts-corner/" class="grey-text text-darken-3">Experts Corner</a></li>
+ 			 <li><a href="/save-money/" class="grey-text text-darken-3">Save Money</a></li>
+ 			 <li><a href="/health-tips/" class="grey-text text-darken-3">Health Tips</a></li>
 		  </ul>
 		  <ul class="side-nav" id="mobile-demo">
-			 <li><a href="sass.html">Sass</a></li>
-			 <li><a href="badges.html">Components</a></li>
-			 <li><a href="collapsible.html">Javascript</a></li>
-			 <li><a href="mobile.html">Mobile</a></li>
+			<li><a href="/how-to/" class="green-text text-darken-3">How-To-Guides</a></li>
+  			<li><a href="/experts-corner/" class="grey-text text-darken-3">Experts Corner</a></li>
+  			<li><a href="/save-money/" class="grey-text text-darken-3">Save Money</a></li>
+  			<li><a href="/health-tips/" class="grey-text text-darken-3">Health Tips</a></li>
 		  </ul>
 		</div>
 	</div>

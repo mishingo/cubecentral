@@ -9,7 +9,7 @@ $params = $_SERVER['QUERY_STRING'];
 get_template_part('inc/navbar','page');
 ?>
 
-<div class="row">
+<div id="home-page" class="row">
    <div class="container">
       <div class="row mt-m--s white-text">
          <?php
@@ -79,7 +79,7 @@ get_template_part('inc/navbar','page');
             <?php get_template_part('inc/home-left-side','page'); ?>
          </div>
          <div class="col m8 mt-m--s mt-f--m">
-            
+
             <div class="row">
 
                <?php

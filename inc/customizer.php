@@ -1,8 +1,8 @@
 <?php
 /**
- * Oscar Batlle Theme Customizer.
+ * HGB Theme Customizer.
  *
- * @package Oscar Batlle
+ * @package HGB
  */
 
 /**

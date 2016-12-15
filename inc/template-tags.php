@@ -4,7 +4,7 @@
  *
  * Eventually, some of the functionality here could be replaced by core features.
  *
- * @package Oscar Batlle
+ * @package HGB
  */
 
 if ( ! function_exists( 'the_posts_navigation' ) ) :

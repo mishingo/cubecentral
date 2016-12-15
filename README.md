@@ -1,4 +1,4 @@
-Oscar Batlle
+HGB
 ============
 
 I'm a theme meant for hacking, so try turning me into the next, most awesome, WordPress theme out there. That's what I'm here for.

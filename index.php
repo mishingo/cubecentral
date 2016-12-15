@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Oscar Batlle
+ * @package HGB
  */
 
 get_header(); ?>
