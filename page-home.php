@@ -211,7 +211,8 @@ $params = $_SERVER['QUERY_STRING'];
                                     <p class="white-text no-fluff"><?php the_excerpt(); ?> </p>
                                  </div>
                               </div>
-                        </div>
+                           </div>
+                     
 
                      <?php
                      } else {
@@ -233,7 +234,6 @@ $params = $_SERVER['QUERY_STRING'];
                               <div class="row pa-s--s pl-m--s pr-m--s">
                                     <h3><a class="yellow-text text-darken-2 tw-bold" href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
                                     <span class="white-text no-fluff"><?php the_excerpt(); ?> </span>
-                                 </div>
                               </div>
                         </div>
                      <?php

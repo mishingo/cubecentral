@@ -14,7 +14,6 @@ $params = $_SERVER['QUERY_STRING'];
          <a href="{{ url('/') }}" class="brand-logo"><img class="image-tiny" src="<?php echo get_template_directory_uri();?>/assets/img/logo-small.png" height="40"></a>
          <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
          <ul class="right hide-on-med-and-down">
-
            <?php
             wp_nav_menu( array(
                'menu' => 'home-menu',
@@ -35,14 +34,10 @@ $params = $_SERVER['QUERY_STRING'];
 <div class="row">
    <div class="container">
 
-
-
       <div class="row mt-m--s">
          <div class="col m8 mt-m--s mt-f--m">
-            <div class="row">
-               <span class="black green-text pa-xs--s pl-s--s pr-s--s tw-ultrabold h3"><i class="material-icons">insert_emoticon</i> NEW SHIT</span>
-            </div>
-            <div class="row">
+
+            <div class="row glitch-transition">
                <?php
                   $btpgid=get_queried_object_id();
                   $btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
@@ -54,22 +49,35 @@ $params = $_SERVER['QUERY_STRING'];
 
                    if ( $postslist->have_posts() ) :
                        while ( $postslist->have_posts() ) : $postslist->the_post();
-
-
-                            echo "<div style='border:2px groove black; margin-bottom:5px;'><h3 class='btposth'>";
-                                the_title();
-                            echo "</h3><div class='btpostdiv'>";
-                                the_excerpt();
-                            echo "</div></div>";
-
-                        endwhile;
-
-                            next_posts_link( 'Older Entries', $postslist->max_num_pages );
-                            previous_posts_link( 'Next Entries &raquo;' );
-                       wp_reset_postdata();
-                   endif;
                ?>
 
+                  <h3 class="black-text"><?php the_title(); ?></h3>
+                  <?php
+                     $titlez = get_the_title();
+                     $sanititle = strtolower(str_replace(' ', '-', $titlez));
+                  ?>
+
+                  <?php the_excerpt();  ?>
+                  <a data-navigo href="<?php echo $sanititle; ?>" class="cd-btn cd-modal-trigger">Start Effect</a>
+                  <div class="cd-modal" id="<?php echo $sanititle; ?>">
+                  	<div class="modal-content">
+                  		<h2><?php the_title(); ?></h2>
+                  		<?php the_content();  ?>
+                  	</div> <!-- .modal-content -->
+
+                  	<a href="#0" class="modal-close">Close</a>
+                  </div> <!-- .cd-modal -->
+
+               <?php
+                  endwhile;
+                  next_posts_link( 'Older Entries', $postslist->max_num_pages );
+                  previous_posts_link( 'Next Entries &raquo;' );
+                     wp_reset_postdata();
+                  endif;
+               ?>
+               <div class="cd-transition-layer" data-frame="25">
+               	<div class="bg-layer"></div>
+               </div> <!-- .cd-transition-layer -->
             </div>
 
          </div>
@@ -79,4 +87,12 @@ $params = $_SERVER['QUERY_STRING'];
       </div>
    </div>
 </div>
+
+
+
+
+
+
+
+
 <?php get_footer(); ?>
