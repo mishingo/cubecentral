@@ -89,6 +89,12 @@ small { font-size: 75%; }
   font-size:1.3em;
 }
 
+a{
+  &:hover{
+    text-decoration: underline;
+  }
+}
+
 .red-links{
   li{
     a{

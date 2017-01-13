@@ -12,7 +12,7 @@ $params = $_SERVER['QUERY_STRING'];
    <div class="container">
       <nav>
          <div class="nav-wrapper">
-            <a href="{{ url('/') }}" class="brand-logo"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png"></a>
+            <a href="/" class="brand-logo"><img src="<?php echo get_template_directory_uri();?>/assets/img/logo.png"></a>
             <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
             <ul class="right hide-on-med-and-down">
 
@@ -26,28 +26,30 @@ $params = $_SERVER['QUERY_STRING'];
                ?>
             </ul>
             <ul class="side-nav" id="mobile-demo">
-              <li><a href="{{ url('/login') }}">Login</a></li>
-              <li><a href="{{ url('/register') }}">Register</a></li>
-              <li><a href="/job/create" class="waves-effect waves-red btn-white">Post a Job</a></li>
+               <?php
+                wp_nav_menu( array(
+                   'menu' => 'home-menu',
+                   'theme_location'=>'home-menu',
+                   'menu_class' => 'red-links',
+                   'walker' => new wp_materialize_navwalker()
+                ));
+                ?>
             </ul>
          </div>
       </nav>
-      <div class="row mt-s--s white-text pa-s--s pl-l--s pr-l--s grey darken-4">
+      <div class="row mt-s--s white-text pa-xs--s pl-l--s pr-l--s grey darken-4">
          <div class="col s12 m12 l9 hide-on-med-and-down">
             <ul class="inline-list">
-               <li>Trending: </li>
-               <li>#George Clanton</li>
-               <li> Shut Up Lets Talk</li>
-               <li>SlutGun Music </li>
+               <li class="tw-ultrabold">Trending: </li>
+               <li><small><a class="amber-text tw-bold" href="http://www.100percentelectronica.com/">100% Electronica</a></small></li>
+               <li><small><a class="amber-text tw-bold" href="https://www.facebook.com/SecretCelluloidSociety/">Secret Celluloid Society</a></small></li>
+
             </ul>
 
          </div>
          <div class="col s12 m12 l3 right--m-center social-pad">
-            <i class="i-facebook"></i>
-            <i class="i-twitter"></i>
-            <i class="i-youtube"></i>
-            <i class="i-instagram"></i>
-            <i class="i-snapchat"></i>
+            <a href="https://www.facebook.com/TheCubeCentral/" target="_blank"><i class="i-facebook"></i></a>
+            <a href="https://www.instagram.com/thecubecentral_/" target="_blank"><i class="i-instagram"></i></a>
          </div>
 
       </div>
@@ -212,7 +214,7 @@ $params = $_SERVER['QUERY_STRING'];
                                  </div>
                               </div>
                            </div>
-                     
+
 
                      <?php
                      } else {

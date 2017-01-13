@@ -17,24 +17,88 @@ $(document).ready(function() {
 		}
 	});
 
-   var router = new Navigo(root = null, useHash=true);
+   /*var router = new Navigo(root = null, useHash=true);
    router
    .on('/:id', function (params) {
     	console.log(params.id);
 	 	if(params.id != "shutupletstalk"){
-			var modalId = replace("#",params.id);
+			var modalId = params.id;
 			transitionLayer.addClass('visible opening');
 			var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 800;
-			console.log("gonna start setint");
 			setTimeout(function(){
 			   //modalWindow.filter(modalId).addClass('visible');
-				$(modalId).addClass('visible');
+				if(params.id.substring(0, 2) == "##"){
+					params.id.replace("##", "");
+				}
+				if(params.id.substring(0, 1) == "#"){
+					params.id.replace("#", "");
+				}
+				//$(params.id).addClass('visible');
+
+				if ($("#"+params.id).length){
+					//if(params.id != null){
+							$("#"+params.id).addClass('visible');
+							//document.getElementById(params.id).className = "visible";
+					//}
+				}
+
+				//document.getElementById(params.id).className = "visible";
 			   transitionLayer.removeClass('opening');
 			}, 800);
 
 	 	}
    })
-   .resolve();
+   .resolve();*/
+
+	var router = new Navigo(root = null, useHash=true);
+	var router_pathname = location.pathname;
+
+   router
+   .on('/:id', function (params) {
+		if(location.hash != ""){
+			if ($("#"+params.id).length){
+				transitionLayer.addClass('visible opening');
+				var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 800;
+				setTimeout(function(){
+					console.log(params.id)
+					var link = params.id;
+					if (link.indexOf('#') > -1){
+  						$(params.id).addClass('visible');
+					}else{
+						$("#"+params.id).addClass('visible');
+					}
+
+
+					transitionLayer.removeClass('opening');
+				}, 800);
+			}
+		}
+
+
+	})
+	.resolve();
+
+	/*var router = new Navigo(root = null, useHash = true);
+   var router_pathname = location.pathname;
+	console.log(router_pathname);
+   router
+   .on(router_pathname + "#:id", function(params) {
+       console.log(params);
+		 console.log(params.id);
+
+ 			var modalId = params.id;
+ 			transitionLayer.addClass('visible opening');
+ 			var delay = ( $('.no-cssanimations').length > 0 ) ? 0 : 800;
+ 			setTimeout(function(){
+
+ 				$("#"+params.id).addClass('visible');
+
+ 			   transitionLayer.removeClass('opening');
+ 			}, 800);
+
+
+   })
+   .resolve();*/
 
 
 	modalWindow.on('click', '.modal-close', function(event){

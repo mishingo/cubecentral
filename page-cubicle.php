@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Shut Up Let's Talk
+    Template Name: Cubicle
 */
 
 get_header();
