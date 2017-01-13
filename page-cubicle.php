@@ -1,6 +1,7 @@
 <?php
 /*
-    Template Name: Cubicle
+ Theme Name: cube
+ Template: cubicle
 */
 
 get_header();
