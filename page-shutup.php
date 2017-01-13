@@ -1,6 +1,6 @@
 <?php
 /*
-    Template Name: Shut Up Let's Talk
+    Template Name: Shut Up
 */
 
 get_header();
