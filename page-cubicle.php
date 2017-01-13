@@ -1,6 +1,5 @@
 <?php
 /*
- Theme Name: cube
  Template: cubicle
 */
 
