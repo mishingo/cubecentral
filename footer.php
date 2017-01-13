@@ -11,7 +11,7 @@
 
 ?>
 
-<footer class="row blue darken-4" role="footeringo k">
+<footer class="row blue darken-4" role="footeringo kd">
 
 </footer>
 
