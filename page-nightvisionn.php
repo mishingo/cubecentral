@@ -43,18 +43,23 @@ $thumb_url = $thumb_url_array[0];
          <div class="col m8 offset-m2 mt-m--s mt-f--m pb-l--s">
 
             <div class="row glitch-transition">
-               <?php
-                  $btpgid=get_queried_object_id();
-                  $btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
-                  $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+       
+            <?php 
+            $args = array(
+                'posts_per_page' => 10
+            );
 
-                  $args = array( 'posts_per_page' => 5, 'author' => 2,
-                  'paged' => $paged,'post_type' => 'post' );
-                      $postslist = new WP_Query( $args );
+           
+                $args['author'] = 2;
+      
 
-                   if ( $postslist->have_posts() ) :
-                       while ( $postslist->have_posts() ) : $postslist->the_post();
-               ?>
+         
+            $custom_query = new WP_Query( $args );
+
+            if ( $custom_query->have_posts() ) :
+                while ( $custom_query->have_posts() ) : $custom_query->the_post();
+            ?>
+               
                   <div class="row pa-s--s grey lighten-5 mt-s--s">
                      <?php
                         $titlez = get_the_title();
@@ -80,23 +85,30 @@ $thumb_url = $thumb_url_array[0];
 
 
                   <div class="cd-modal" id="<?php echo $sanititle; ?>">
-                  	<div class="modal-content">
-                  		<h2><?php the_title(); ?></h2>
+                     <div class="modal-content">
+                        <h2><?php the_title(); ?></h2>
                         <div class="post_thumb--b mt-s--s" style="background-image:url(<?php the_field('main_image');?>);">
                         </div>
-                  		<?php the_content();  ?>
-                  	</div> <!-- .modal-content -->
+                        <?php the_content();  ?>
+                     </div> <!-- .modal-content -->
 
-                  	<a href="#0" class="modal-close">Close</a>
+                     <a href="#0" class="modal-close">Close</a>
                   </div> <!-- .cd-modal -->
 
                <?php
-                  endwhile;
-                  next_posts_link( 'Older Entries', $postslist->max_num_pages );
-                  previous_posts_link( 'Next Entries &raquo;' );
-                     wp_reset_postdata();
-                  endif;
+             
                ?>
+            <?php
+                endwhile;
+                next_posts_link( 'Older Entries', $postslist->max_num_pages );
+                previous_posts_link( 'Next Entries &raquo;' );
+                   wp_reset_postdata();
+            else :
+                echo 'No posts found...';
+            endif;
+            ?>
+
+         
                <div class="cd-transition-layer" data-frame="25">
                	<div class="bg-layer"></div>
                </div> <!-- .cd-transition-layer -->
