@@ -48,7 +48,7 @@ $thumb_url = $thumb_url_array[0];
                   $btmetanm=get_post_meta( $btpgid, 'WP_Catid','true' );
                   $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
 
-                  $args = array( 'posts_per_page' => 5, 'author__in'=> array(3),
+                  $args = array( 'posts_per_page' => 5, 'author' => 3,
                   'paged' => $paged,'post_type' => 'post' );
                       $postslist = new WP_Query( $args );
 
