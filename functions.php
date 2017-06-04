@@ -145,6 +145,7 @@ function oscar_batlle_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'oscar_batlle_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */

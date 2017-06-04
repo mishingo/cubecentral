@@ -1,50 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg width="352px" height="94px" viewBox="0 0 352 94" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 39.1 (31720) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 3</title>
+<svg width="300px" height="47px" viewBox="0 0 300 47" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 43.2 (39069) - http://www.bohemiancoding.com/sketch -->
+    <title>Group 2</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <text id="text-1" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FF5A1C">
-            <tspan x="0" y="42">CUBE</tspan>
-            <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
-        </text>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-2">
-            <feGaussianBlur stdDeviation="10" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-3">
-            <feOffset dx="0" dy="2" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
-            <feGaussianBlur stdDeviation="6" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
-            <feColorMatrix values="0 0 0 0 0.97254902   0 0 0 0 0.345098039   0 0 0 0 0.109803922  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
-        </filter>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-4">
-            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-5">
-            <feGaussianBlur stdDeviation="0" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-6">
-            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-        <filter x="-50%" y="-50%" width="200%" height="200%" filterUnits="objectBoundingBox" id="filter-7">
-            <feGaussianBlur stdDeviation="1" in="SourceGraphic"></feGaussianBlur>
-        </filter>
-    </defs>
+    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="Desktop-HD-Copy-3" transform="translate(-111.000000, -9.000000)">
-            <g id="Group-3" transform="translate(139.000000, 27.000000)">
-                <g id="CUBE-CENTRAL" filter="url(#filter-2)" stroke="#F8581C">
-                    <use fill="#FF5A1C" fill-opacity="1" stroke-opacity="1" filter="url(#filter-3)" xlink:href="#text-1"></use>
-                    <use fill="#FF5A1C" fill-opacity="1" stroke-opacity="1" xlink:href="#text-1"></use>
-                    <use xlink:href="#text-1"></use>
+        <g id="iPad-Pro-Portrait-Copy" transform="translate(-221.000000, -141.000000)">
+            <g id="Group" transform="translate(221.000000, 141.000000)">
+                <g id="Group-2">
+                    <path d="M32.9040906,13.2098926 C30.4893756,11.3697583 27.4515083,10.2580105 24.179959,10.2580105 C16.3905557,10.2580105 10.0421921,16.5067999 10.0421921,24.1740262 C10.0421921,31.8412525 16.3905557,38.0900419 24.179959,38.0900419 C27.6072964,38.0900419 30.7620047,36.8632857 33.2156667,34.8698069 L29.7104353,30.9211854 C24.5694291,34.7547985 16.1179266,31.7262441 16.1179266,24.1740262 C16.1179266,16.9668335 24.1020649,13.8232707 29.3988591,17.1968503 L32.9040906,13.2098926 Z M57.2459757,27.624278 L57.2459757,10.6797079 L51.7933934,10.6797079 L51.7933934,27.6626142 L51.8323405,27.6626142 C51.7933934,29.0043788 51.2870822,30.231135 50.3134068,31.1895383 C49.3397314,32.1479416 48.0934269,32.6463113 46.7302813,32.6463113 C45.3671358,32.6463113 44.0818842,32.1479416 43.1082088,31.1895383 C42.1345334,30.231135 41.5892752,28.9660427 41.5892752,27.624278 L41.5892752,10.6797079 L36.1366929,10.6797079 L36.1366929,27.6626142 C36.17564,33.3746978 40.8882289,38.0133697 46.7302813,38.0133697 C52.5333868,38.0133697 57.2849227,33.3746978 57.2849227,27.624278 L57.2459757,27.624278 Z M61.3743594,10.7180441 L68.8132395,10.7180441 C73.2142523,10.7180441 76.7973778,14.2449682 76.7973778,18.576951 C76.7973778,20.2254047 76.2910666,21.7205138 75.3952852,22.9856061 C77.3815831,24.4807153 78.6278876,26.8192193 78.6278876,29.4260762 C78.6278876,33.9497397 74.9279211,37.5533361 70.3711202,37.5533361 L61.3743594,37.5533361 L61.3743594,10.7180441 Z M66.2037894,21.3371525 L68.5795574,21.3371525 C70.098491,21.3371525 71.7342657,20.1103963 71.7342657,18.2319258 C71.7342657,16.3534554 70.098491,15.2033715 68.5795574,15.2033715 L66.2037894,15.2033715 L66.2037894,21.3371525 Z M66.3206305,32.9913365 L70.2932261,32.9913365 C72.1237359,32.9913365 73.6426695,31.5728996 73.6426695,29.7711014 C73.6426695,27.9693032 72.1237359,26.5125302 70.2932261,26.5125302 L66.3206305,26.5125302 L66.3206305,32.9913365 Z M101.489786,10.6797079 L83.3015295,10.6797079 L83.3015295,37.5533361 L101.372945,37.5533361 L101.372945,32.1862777 L88.7541118,32.1862777 L88.7541118,26.3591857 L99.2698062,26.3591857 L99.2698062,20.9921273 L88.7541118,20.9921273 L88.7541118,16.0467663 L101.489786,16.0467663 L101.489786,10.6797079 Z M141.098902,13.2098926 C138.684187,11.3697583 135.646319,10.2580105 132.37477,10.2580105 C124.585367,10.2580105 118.237003,16.5067999 118.237003,24.1740262 C118.237003,31.8412525 124.585367,38.0900419 132.37477,38.0900419 C135.802107,38.0900419 138.956816,36.8632857 141.410478,34.8698069 L137.905246,30.9211854 C132.76424,34.7547985 124.312738,31.7262441 124.312738,24.1740262 C124.312738,16.9668335 132.296876,13.8232707 137.59367,17.1968503 L141.098902,13.2098926 Z M164.661846,10.6797079 L146.47359,10.6797079 L146.47359,37.5533361 L164.545005,37.5533361 L164.545005,32.1862777 L151.926172,32.1862777 L151.926172,26.3591857 L162.441866,26.3591857 L162.441866,20.9921273 L151.926172,20.9921273 L151.926172,16.0467663 L164.661846,16.0467663 L164.661846,10.6797079 Z M190.522665,37.5533361 L175.177541,21.8738583 L175.177541,37.5533361 L169.724958,37.5533361 L169.724958,10.6797079 L171.438627,10.6797079 L186.511122,25.7074715 L186.511122,10.6797079 L191.963705,10.6797079 L191.963705,37.5533361 L190.522665,37.5533361 Z M196.442612,10.6797079 L196.442612,16.0467663 L204.03728,16.0467663 L204.03728,37.5533361 L209.489862,37.5533361 L209.489862,16.0467663 L217.045583,16.0467663 L217.045583,10.6797079 L196.442612,10.6797079 Z M221.13502,10.6413718 L231.884396,10.6413718 C236.40225,10.6413718 240.06327,14.2833043 240.06327,18.7302955 C240.06327,21.9888667 237.921184,25.4774547 234.532793,26.0524967 L240.219058,37.5533361 L234.415952,37.5533361 L229.313893,26.7808832 L229.313893,26.742547 L226.587602,20.9537912 L226.587602,37.515 L221.13502,37.515 L221.13502,10.6413718 Z M229.547575,16.0084302 L232.234919,21.3754886 C233.559118,21.2221441 234.610687,20.1103963 234.610687,18.7302955 C234.610687,17.2351864 233.40333,16.0084302 231.884396,16.0084302 L229.547575,16.0084302 Z M257.862056,10.6797079 L270.091419,36.1348992 L270.091419,37.5533361 L243.101137,37.5533361 L243.101137,36.1348992 L256.265228,10.6797079 L257.862056,10.6797079 Z M251.241063,32.1862777 L262.146228,32.1862777 L256.927328,21.2221441 L251.241063,32.1862777 Z M278.932392,10.6797079 L273.47981,10.6797079 L273.47981,37.515 L289.097563,37.515 L289.097563,32.1862777 L278.932392,32.1862777 L278.932392,10.6797079 Z" id="CUBE-CENTRAL-Copy" fill="#6A6A6A"></path>
+                    <rect id="Rectangle-5" stroke="#6B6B6B" stroke-width="3" x="1.5" y="1.5" width="297" height="44"></rect>
                 </g>
-                <text id="CUBE-CENTRAL" stroke="#F8581C" filter="url(#filter-5)" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FF5A1C">
-                    <tspan x="0" y="42">CUBE</tspan>
-                    <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
-                </text>
-                <text id="CUBE-CENTRAL" stroke="#FF966F" stroke-width="2" filter="url(#filter-7)" font-family="Jaapokkisubtract-Regular, Jaapokki subtract" font-size="42" font-weight="normal" letter-spacing="-0.671999753" fill="#FFCFBC">
-                    <tspan x="0" y="42">CUBE</tspan>
-                    <tspan x="101.388001" y="42" font-family="Jaapokkienchance-Regular, Jaapokki enchance"> CENTRAL</tspan>
-                </text>
             </g>
         </g>
     </g>

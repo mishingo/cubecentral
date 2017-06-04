@@ -1,0 +1,8 @@
+
+@font-face {
+  font-family: 'AkuraPopo';
+  src: url('AkuraPopo.eot?#iefix') format('embedded-opentype'),  url('AkuraPopo.otf')  format('opentype'),
+	     url('AkuraPopo.woff') format('woff'), url('AkuraPopo.ttf')  format('truetype'), url('AkuraPopo.svg#AkuraPopo') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -1,65 +1,48 @@
 <?php
 /**
+Template Name: Archives
  * The template for displaying archive pages.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
  * @package HGB
  */
+get_header(); 
+ get_template_part('inc/navbar','page');
+?>
 
-get_header(); ?>
+<div class="row black">
+    <div class="container pb-xl--s">
+        <div class="row white-text pt-m--s">
+           <h2><span class="deep-purple accent-3 pl-s--s pr-s--s">The Past</span></h2>
+        </div>
+        <div class="row masonry-layout">
+        <?php $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+        $args = array( 'post_type' => 'post', 'posts_per_page' => 30, 'paged' => $paged );
+        $wp_query = new WP_Query($args);
+        while ( have_posts() ) : the_post(); ?>
+            <a href="<?php the_permalink(); ?>">
+                <div class="pl-s--s pr-s--s pt-xs--s pb-xs--s masonry-layout-panel">
+                  <div class="row white border-top--m light-shadow br-m pa-s--s">
+                    <div class="col s4">
+                        
+                        <img src="<?php the_field('main_image');?>" alt="">
+                    </div>
+                    <div class="col s8 pl-s--s">
+                        <p class="no-fluff black-text tw-ultrabold"><small><?php the_date(); ?></small></p>
+                        <h4 class="tw-ultrabold deep-purple-text"><?php the_title() ?></h4>
+                    </div>
+                    
+                  </div>
+                </div>
+            </a>
+        <?php endwhile; ?>
 
-
-<?php if (have_posts()) : ?>
-    <section class="feature-image feature-image-default-alt" data-type="background" data-speed="2">
-        <h1 class="page-title">
-            <?php
-            the_archive_title('', '');
-            the_archive_description('<small class="taxonomy-description">', '</small>');
-            ?>
-        </h1>
-    </section>
-
-<div class="container">
-    <div id="primary" class="row">
-        <main id="content" class="col-sm-8">
-
-            <?php /* Start the Loop */ ?>
-            <?php while (have_posts()) : the_post(); ?>
-
-                <?php
-
-                /*
-                 * Include the Post-Format-specific template for the content.
-                 * If you want to override this in a child theme, then include a file
-                 * called content-___.php (where ___ is the Post Format name) and that will be used instead.
-                 */
-                get_template_part('template-parts/content', get_post_format());
-                ?>
-
-            <?php endwhile; ?>
-
-            <?php the_posts_navigation(); ?>
-
-            <?php else : ?>
-
-                <?php get_template_part('template-parts/content', 'none'); ?>
-
-            <?php endif; ?>
-
-        </main>
-        <!-- close main -->
-
-        <!-- SIDEBAR -->
-
-        <aside class="col-sm-4">
-            <?php get_sidebar(); ?>
-        </aside>
-
+        <!-- then the pagination links -->
+        <?php next_posts_link( '&larr; Older posts', $wp_query ->max_num_pages); ?>
+        <?php previous_posts_link( 'Newer posts &rarr;' ); ?>
+        </div>
     </div>
-    <!-- end of div with id primary -->
 </div>
-<!-- end of div with class container -->
-
 
 <?php get_footer(); ?>

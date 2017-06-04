@@ -25,7 +25,7 @@ gulp.task('styles', () => {
     .pipe(reload({stream: true}));
 });
 gulp.task('js', () => {
-  return gulp.src( ['assets/js/jquery.min.js','assets/js/materialize.min.js', 'assets/js/modal-post.js' ,'assets/js/main.js'])
+  return gulp.src( ['assets/js/jquery.min.js','assets/js/materialize.min.js', 'assets/js/modal-post.js' ,'assets/js/main.js','assets/js/mutate.js'])
   .pipe(concat('vendor.js'))
   .pipe(gulp.dest('public/js'));
 });

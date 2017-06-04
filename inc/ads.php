@@ -1,0 +1,1 @@
+<img src="<?php echo get_template_directory_uri();?>/assets/img/ad/2017-6-3-underground-vhs-theater.png"  alt="vhs underground theater">

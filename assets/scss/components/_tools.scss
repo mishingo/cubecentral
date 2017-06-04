@@ -313,3 +313,197 @@
       color:#fff;
    }
 }
+
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,400,900');
+
+
+
+.cube-container-text{
+   position: absolute;
+   z-index: 99999999999;
+   width: 100%;
+   font-family: 'lato', serif;
+   color:#fff;
+   font-weight:100;
+   font-size: 8em;
+    @media #{$large-and-up}{
+      margin-top: 55px;
+    }
+
+}
+
+
+// = Cube Module
+//-------------------------------------------------------------------------------//
+// IE9 and below doens't support 
+// cssransforms3d but does support csstransforms
+.cube-parent-container{
+   display:flex;align-items:center;
+   justify-content: center;
+   flex-direction:column;
+   padding: 100px 0px;
+   position: absolute;
+   width: 100%;
+}
+
+
+  // =======CUBE CONTAINER ======= //
+
+  .cube-container {
+    height: 215px;
+    position: relative;
+    width: 200px;
+    perspective:600px;// distance between the scene and the viewer
+    perspective-origin: 50% 50%;
+    transition: .3s all ease;
+  }
+
+  // =======BEGIN CUBE ======= //
+
+  .cube {
+    animation: spin 33s infinite linear;
+    height: 100%;
+    position: absolute;
+    transition: .5s all ease-in-out;
+    // preserve 3fd effect of child elements
+    // default value is 'flat'
+    // preserve effects of child elements
+    transform-style: preserve-3d;
+    // panels global styles
+    transform: rotateX(-20deg) rotateY(28deg);
+    // tells browser not to render the back of the element
+    // Accepts visible | hidden
+    backface-visibility: visible;
+    width: 100%;
+
+    figure {
+      box-sizing: border-box;
+      margin: 0;
+      display: block;
+      height: 200px;
+      position: absolute;
+      width: 200px;
+      font-size: 2em;
+      line-height: 6em;
+      text-align: center;
+    }
+  }
+
+  // =======BEGIN CUBE PANELS======= //
+
+  .cube .front {
+    transform: translateZ(100px);
+    background: rgba(256,256,256,.5);
+  }
+  .cube .back {
+    transform: rotateY(180deg) rotateX(0deg) translateZ(100px);
+    background: rgba(256,256,256,.6);
+  }
+  .cube .left {
+    transform: rotateY(-90deg) translateZ(100px);
+    background: rgba(256,256,256,.5);
+  }
+  .cube .right {
+    transform: rotateY(90deg) translateZ(100px);
+    background: rgba(256,256,256,.4);
+  }
+  .cube .top {
+    transform: rotateX(90deg) translateZ(100px);
+    background: rgba(220,220,220,.3);
+  }
+  .cube .bottom {
+    transform: rotateX(-90deg) rotateZ(-180deg) translateZ(100px);
+    background: rgba(196,196,196,.5);
+    opacity: .55;
+  }
+
+
+
+@keyframes spin {
+  from { transform: rotateX(0) rotateY(0); }
+  to   { transform: rotateX(360deg) rotateY(360deg); }
+}
+
+.vhs-glitch {
+   margin: 0;
+   padding: 0;
+   background: url("https://julianmaunder.github.io/vcr-js/images/vcr.jpg") top left repeat-y, black;
+   background-attachment: fixed;
+   -webkit-background-size: 100% 18360px;
+   -moz-background-size: 100% 18360px;
+   -ms-background-size: 100% 18360px;
+   background-size: 100% 18360px;
+   animation: background-loop 1s infinite steps(1);
+}
+
+@keyframes background-loop {
+   $steps: 17;
+   @for $i from 0 through $steps {
+      #{percentage($i*(1/$steps))} {
+         background-position: 0% (-1080 * $i)*1px;
+      }
+   }
+}
+
+footer.page-footer {
+    margin-top: 0px;
+    padding-top: 0px;
+    background-color: #D32F2F;
+}
+
+.dg.ac{
+  display:none;
+}
+#canvasGL{
+  margin-bottom: -6px;
+}
+
+.party-scroll{
+  width:100%;
+  overflow-x:scroll;
+}
+
+.party-card{
+  width:150px;
+  display: inline-block;
+  margin-left:50px;
+  .party-image{
+    border-radius:50%;
+    height:150px;
+    width:150px;
+    background-size:cover;
+    background-position:center;
+    background-repeat:no-repeat;
+  }
+}
+
+.horizontal-scroll {
+  overflow: hidden;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+
+.masonry-layout {
+  column-count: 1;
+  column-gap: 0;
+  transition: 1s cubic-bezier(0.23, 1, 0.32, 1);
+  @media #{$medium-and-up} {
+    column-count: 2;
+  }
+  @media #{$large-and-up} {
+    column-count: 4;
+  }
+  @media only screen and (min-width: 1200px){
+    column-count: 4;
+  }
+}
+.masonry-layout-panel {
+  break-inside: avoid;
+  padding: 5px;
+}
+.masonry-layout-panel__content {
+  padding: 10px;
+  border-radius: 10px;
+}

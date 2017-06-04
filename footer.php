@@ -11,39 +11,25 @@
 
 ?>
 
-<footer class="page-footer grey lighten-4">
+<footer class="page-footer grey darken-3 pt-l--s">
    <div class="container">
-      <div class="row pb-m--s">
+      <div class="row pb-m--s center-align">
          <div class="col l4 s12 center-align mt-s--s mt-f--m">
-            <img  style="margin-left:auto;margin-right:auto;"  src="<?php echo get_template_directory_uri();?>/assets/img/bestquotes/2562561.jpg">
+         <a href="https://www.facebook.com/Shutupletstalk/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/assets/img/shutup-promo.png" alt="The Cube Central" ></a>
          </div>
-         <div class="col l2 s4 mt-m--s">
-            <img  style="margin-left:auto;margin-right:auto;"  src="<?php echo get_template_directory_uri();?>/assets/img/logo-square.svg">
+        
+         <div class="col l4 s12 pa-s--s pa-f--m mt-s--s center-align">
+            <a href="https://www.facebook.com/nightvisionnnn" target="_blank"><img src="<?php echo get_template_directory_uri();?>/assets/img/nightvisionnnn.png" alt="The Cube Central" ></a>
          </div>
-         <div class="col l3 s8 pa-s--s pa-f--m">
-            <h4 class="tw-ultrabold">Check This Out!</h4>
-            <ul>
-               <li><a class="grey-text text-darken-2" href="https://www.addiliate.com/redirect.html?ad=VQ6873UL">Secret Hack to Lowering Your Insurance</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 2</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 3</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 4</a></li>
-            </ul>
-         </div>
-         <div class="col l3 s8 pa-m--s pa-f--m hide-on-med-and-down">
-            <h4 class="tw-ultrabold">Check This Out!</h4>
-            <ul>
-               <li><a class="grey-text text-darken-2" href="https://www.addiliate.com/redirect.html?ad=VQ6873UL">Secret Hack to Lowering Your Insurance</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 2</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 3</a></li>
-               <li><a class="grey-text text-darken-2" href="#!">Link 4</a></li>
-            </ul>
+         <div class="col l4 s12 pa-m--s pa-f--m mt-s--s center-align">
+           <a href="https://www.facebook.com/TheCubeCentral/" target="_blank"><img src="<?php echo get_template_directory_uri();?>/assets/img/cube-fb.png" alt="The Cube Central" ></a>
          </div>
 
       </div>
    </div>
    <div class="footer-copyright">
       <div class="container grey-text">
-         © 2014 HomeGuideBlog.net, All Rights Reserved
+         © 2014 thecubecentral.com, All Rights Reserved
 
       </div>
    </div>
